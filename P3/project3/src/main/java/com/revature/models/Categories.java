@@ -1,5 +1,11 @@
 package com.revature.models;
 
-public class Categories {
+import javax.persistence.Entity;
+
+import org.springframework.stereotype.Component;
+
+
+public enum Categories {
+	Walking,Grooming,DayCare;
 
 }
