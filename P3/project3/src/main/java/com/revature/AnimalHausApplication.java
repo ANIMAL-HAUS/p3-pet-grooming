@@ -41,6 +41,7 @@ public class AnimalHausApplication{
 ////		}
 		//Users u1 = new Users("Momo", "Traore", "MomoT1", "password","momotraore@yahoo.com", "New York");
 			SpringApplication.run(AnimalHausApplication.class, args);
+			
 			System.out.println("Hello");
 		
 		
