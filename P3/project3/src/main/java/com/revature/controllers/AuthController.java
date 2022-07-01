@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
+import com.revature.models.UserRole;
 import com.revature.models.Users;
 import com.revature.repository.UserDAO;
 import com.revature.services.AuthenticationServices;
@@ -33,7 +33,23 @@ public class AuthController {
 		if(user.getUserName() == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(user);
 		}else {
+			user.setRole(UserRole.Customer);
 			as.insertUser(user);
+			return ResponseEntity.status(HttpStatus.CREATED).body(user);
+		}
+		
+		
+	}
+	@PostMapping("/contractor")
+	public ResponseEntity<Users> insertUserContractor(@RequestBody Users user){
+		System.out.println(user.getPassword());
+		
+		if(user.getUserName() == null) {
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(user);
+		}else {
+			user.setRole(UserRole.Contractor);
+			as.insertUser(user);
+			
 			return ResponseEntity.status(HttpStatus.CREATED).body(user);
 		}
 		

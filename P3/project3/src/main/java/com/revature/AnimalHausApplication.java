@@ -1,4 +1,4 @@
-package com.revature.launcher;
+package com.revature;
 import java.util.List;
 
 import org.hibernate.HibernateException;
