@@ -9,7 +9,10 @@ import { CustomerProfileComponent } from './component/customer-profile/customer-
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,17 @@ import { FooterComponent } from './component/footer/footer.component';
     CustomerProfileComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterCustomerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
