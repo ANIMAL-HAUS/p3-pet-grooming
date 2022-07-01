@@ -45,14 +45,11 @@ public class CartServices {
 		// TODO Auto-generated constructor stub
 	}
 	public ArrayList<Product> addingToCart(Product p,ArrayList<Product> products){
-		if (pd.getByProductName(p.getgName()) != null) {
+		
 		cartList.add(p);
 		System.out.println(cartList);
 		return cartList;
-		}
-		else {
-			return null;
-		}
+		
 	}
 	public double checkout(int userid, ArrayList<Product> p) {
 		

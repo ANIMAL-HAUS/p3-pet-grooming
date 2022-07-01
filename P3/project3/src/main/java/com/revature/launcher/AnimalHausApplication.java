@@ -23,23 +23,25 @@ public class AnimalHausApplication{
 		
 //		try(Session ses = HibernateUtil.getSession()){
 //			System.out.println("Connection Successful");
-//			//Product game = new Product(Categories.Games, "NBA 2K", "2K19", 59.99);
-//			//ProductServices ps = new ProductServices();
-//			//Product product =ProductServices.getProductById(1);
-//			//System.out.println(product);
-//			//UserDAO ud = new UserDAO();
-//			//Users u1 = new Users("Momo", "Traore", "MomoT1", "password","momotraore@yahoo.com", "New York");
-//			//ud.insertUser(u1);
-////			List <Product> p = ProductServices.getAllProducts();
-////			System.out.println(p);
+////			//Product game = new Product(Categories.Games, "NBA 2K", "2K19", 59.99);
+////			//ProductServices ps = new ProductServices();
+////			//Product product =ProductServices.getProductById(1);
+////			//System.out.println(product);
+////			//UserDAO ud = new UserDAO();
+////			
+////			//ud.insertUser(u1);
+//////			List <Product> p = ProductServices.getAllProducts();
+//////			System.out.println(p);
 //			
+////			
 //		}
-//		catch (HibernateException e) {
+//	catch (HibernateException e) {
 //			System.out.println("Connection Failed");
 //			e.printStackTrace();
-//		}
-		SpringApplication.run(AnimalHausApplication.class, args);
-		System.out.println("Hello");
+////		}
+		//Users u1 = new Users("Momo", "Traore", "MomoT1", "password","momotraore@yahoo.com", "New York");
+			SpringApplication.run(AnimalHausApplication.class, args);
+			System.out.println("Hello");
 		
 		
 //		
@@ -49,8 +51,7 @@ public class AnimalHausApplication{
 
 			
 	}
-
-}
+	}
 
 
 	
