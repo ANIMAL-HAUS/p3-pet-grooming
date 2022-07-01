@@ -10,7 +10,15 @@ export class ServicesService {
 
   constructor(private httpClient:HttpClient) { }
 
-  addUser(newUser: Users) {
-    return this.httpClient.post<Users>('http://localhost:3000/gamego/authcontroller', newUser);   
+  addContractor(newUser: Users) {
+    return this.httpClient.post<Users>('', newUser);   
+  }
+
+  addCustomer(newUser: Users) {
+    return this.httpClient.post<Users>('', newUser);   
+  }
+  getUsers()
+  {
+    return this.httpClient.get<Users[]>('http://localhost:3000/gamego/usercontroller/getallusers');
   }
 }
