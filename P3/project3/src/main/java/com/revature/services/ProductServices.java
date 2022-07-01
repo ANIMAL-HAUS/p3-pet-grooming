@@ -18,7 +18,7 @@ public class ProductServices {
 	@Autowired
 	public ProductServices() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 //	public ProductServices(Product product) {
 //		pd.getByProductName(product.getgName());
