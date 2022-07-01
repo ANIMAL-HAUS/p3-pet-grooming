@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.revature.models.Categories;
 import com.revature.models.Product;
 import com.revature.repository.ProductDAO;
 
@@ -39,8 +40,8 @@ public static Product getProductById(int id) {
 public List<Product> getAllUsers() {
 	return ProductDAO.getAllProducts();
 }
-public static Product getByProductName(String name) {
-	return ProductDAO.getByProductName(name);
+public static Product getByProductCategories(Categories productType) {
+	return ProductDAO.getByProductCategory(productType);
 }
 public static void insertProduct(Product product) {
 	 ProductDAO.insertProduct(product);

@@ -9,6 +9,7 @@ import javax.persistence.Query;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
+import com.revature.models.Categories;
 import com.revature.models.Product;
 import com.revature.utilities.HibernateUtil;
 
@@ -51,11 +52,11 @@ public class ProductDAO {
 			HibernateUtil.closeSession(); //closes the session
 			return product; //returns the user
 		}
-		public static Product getByProductName(String name) {
+		public static Product getByProductCategory(Categories productType) {
 			Session ses = HibernateUtil.getSession(); //This opens the session
 			
-			Query q = ses.createQuery("FROM Product WHERE gname = ?1");
-			q.setParameter(1,name);
+			Query q = ses.createQuery("FROM Product WHERE productType = ?1");
+			q.setParameter(1,productType);
 			try {
 				List<Product> productList = q.getResultList();
 				HibernateUtil.closeSession();
