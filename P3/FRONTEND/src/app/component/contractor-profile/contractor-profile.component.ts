@@ -23,7 +23,7 @@ export class ContractorProfileComponent implements OnInit {
     this.refreshData();
   }
   refreshData() {
-    this.ServicesService.getUsers().subscribe(
+    this.ServicesService.getContractors().subscribe(
       response => this.handleSuccessfulResponse(response),
     );
 
