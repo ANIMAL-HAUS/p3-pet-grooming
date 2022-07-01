@@ -5,8 +5,10 @@ import java.util.List;
 
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,54 +17,62 @@ import javax.persistence.ManyToOne;
 
 import javax.persistence.Table;
 
+import org.apache.catalina.User;
 import org.springframework.stereotype.Component;
 
-
+@Component
 @Entity
-@Table(name = "OrderList")
+@Table(name = "OrderHistory")
 public class OrderHistory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderId;
-	private int userId;
-	private int productId;
+	private Categories product;
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id")
+	private User user;
+	
+	public OrderHistory(int orderId, Categories product, User user) {
+		super();
+		this.orderId = orderId;
+		this.product = product;
+		this.user = user;
+	}
+
 	public OrderHistory() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public OrderHistory(int orderId, int userId, int productId) {
-		super();
-		this.orderId = orderId;
-		this.userId = userId;
-		this.productId = productId;
-	}
-	public OrderHistory( int userId, int productId) {
-		super();
-		this.userId = userId;
-		this.productId = productId;
-	}
+
 	public int getOrderId() {
 		return orderId;
 	}
+
 	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
-	public int getUserId() {
-		return userId;
+
+	public Categories getProduct() {
+		return product;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+
+	public void setProduct(Categories product) {
+		this.product = product;
 	}
-	public int getProductId() {
-		return productId;
+
+	public User getUser() {
+		return user;
 	}
-	public void setProductId(int productId) {
-		this.productId = productId;
+
+	public void setUser(User user) {
+		this.user = user;
 	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(orderId, productId, userId);
+		return Objects.hash(orderId, product, user);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -72,10 +82,12 @@ public class OrderHistory {
 		if (getClass() != obj.getClass())
 			return false;
 		OrderHistory other = (OrderHistory) obj;
-		return orderId == other.orderId && productId == other.productId && userId == other.userId;
+		return orderId == other.orderId && product == other.product && Objects.equals(user, other.user);
 	}
+
 	@Override
 	public String toString() {
-		return "OrderHistory [orderId=" + orderId + ", userId=" + userId + ", productId=" + productId + "]";
+		return "OrderHistory [orderId=" + orderId + ", product=" + product + ", user=" + user + "]";
 	}
+	
 }

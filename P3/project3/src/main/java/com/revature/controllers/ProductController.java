@@ -62,9 +62,7 @@ public class ProductController {
 			
 	}
 	@PostMapping("/insertProductGrooming")
-	public static ResponseEntity<Product> insertProductGames(@RequestBody Product product){
-		
-		
+	public static ResponseEntity<Product> insertProductGrooming(@RequestBody Product product){
 		
 		product.setProduct(Categories.Grooming);
 		ProductServices.insertProduct(product);
