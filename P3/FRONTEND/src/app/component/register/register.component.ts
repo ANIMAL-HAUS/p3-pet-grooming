@@ -28,13 +28,13 @@ export class RegisterComponent implements OnInit {
     console.log(Role);
   }
 
-  addUser() {
-    this.ServicesService.addUser(this.user).subscribe(
+  addContractor() {
+    this.ServicesService.addContractor(this.user).subscribe(
       (user) => {
         this.userAddedEvent.emit();
         this.router.navigate(['component']);
       }
     );
   }
-
+ 
 }
