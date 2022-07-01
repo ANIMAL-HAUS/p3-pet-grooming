@@ -37,7 +37,7 @@ export class CustomerProfileComponent implements OnInit {
   }
   
   viewContractor(id: number) {
-    this.router.navigate(['component', 'contractor-profile'], {queryParams : {id, action: 'view'}});
+    this.router.navigate(['component', 'customer-profile'], {queryParams : {id, action: 'view'}});
   }
 
   handleSuccessfulResponse(response: Users[]) {
@@ -45,7 +45,7 @@ export class CustomerProfileComponent implements OnInit {
     console.log(this.users);
   }
 
-  addContractor() {
+  addCustomer() {
     this.selectedUser = new Users();
     this.router.navigate(['component', 'customer-profile'], { queryParams: { action: 'add' } });
   }
