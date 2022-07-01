@@ -39,7 +39,18 @@ public class UserDAO {
 		HibernateUtil.closeSession(); //This closes the session
 		return userList; //This returns the list
 	}
-	
+	public static List<Users> getAllContractors(){
+		Session ses = HibernateUtil.getSession(); //This opens the session
+		List<Users> userList = ses.createQuery("FROM Users WHERE role = 1").list(); //This is HQL which will get all items from the user Table
+		HibernateUtil.closeSession(); //This closes the session
+		return userList; //This returns the list
+	}
+	public static List<Users> getAllCustomers(){
+		Session ses = HibernateUtil.getSession(); //This opens the session
+		List<Users> userList = ses.createQuery("FROM Users WHERE role = 0").list(); //This is HQL which will get all items from the user Table
+		HibernateUtil.closeSession(); //This closes the session
+		return userList; //This returns the list
+	}
 	public Users getUsersById(int id) {
 		Session ses = HibernateUtil.getSession(); //opens the session
 		Users user = ses.get(Users.class, id); //This will select all users by ID (This should result in only one user, but id is a PK which is unique)
