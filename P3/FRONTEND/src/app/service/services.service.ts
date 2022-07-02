@@ -17,8 +17,12 @@ export class ServicesService {
   addCustomer(newUser: Users) {
     return this.httpClient.post<Users>('', newUser);   
   }
-  getUsers()
+  getContractors()
   {
-    return this.httpClient.get<Users[]>('http://localhost:3000/gamego/usercontroller/getallusers');
+    return this.httpClient.get<Users[]>('http://localhost:5000/petgrooming/usercontroller/getallcontractors');
+  }
+  getCustomers()
+  {
+    return this.httpClient.get<Users[]>('http://localhost:5000/petgrooming/usercontroller/getallcustomers');
   }
 }
