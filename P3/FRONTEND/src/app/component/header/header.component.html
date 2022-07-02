@@ -1,19 +1,43 @@
 <nav>
-    <div class="navbar navbar-light bg-light shadow-sm">
-      <div class="navbar-brand align-item-center d-flex">
-        <a routerLink="/dashboard">
-          <strong class="logo" style="font-size: 30px;">ANIMAL HAUS - PET GROOMING</strong>
-        </a>
-      </div>
-      <button class="user">
-        <img src="assets/icons/person-circle.png" alt="basket" style="height:40px; width: 40px;">
-      </button>
-      <button class="cart">
-        <a class="img" routerLink="/cart">
-        <img src="assets/icons/basket2.png" alt="cart" style="height:40px; width: 40px;">
-        <div style="font-size: 10px;" class="badge bg-danger"></div>
-        <!-- {{totalItem}} -->
-        </a>
-    </button>
+  <div class="navbar navbar-light bg-warning shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <a routerLink="/dashboard">
+        <strong class="logo" style="font-size: 30px;">ANIMAL HAUS</strong>
+      </a>
     </div>
-  </nav>
+    <!-- <button class="user">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-pur my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </button> -->
+    <div>
+      <button type="button" class ="login">
+        <a routerLink="/login">LOGIN</a>
+      </button>
+      <button type="button" class ="register">
+        <a routerLink="/login">SIGN UP</a>
+      </button>
+    </div>
+  </div>
+  <div class="navbar navbar-light bg-warning shadow-sm justify-content-center">      
+    <button type="button" class="groom">  
+      <a routerLink="/">
+        <img src="assets/images/groom.jpg">
+        <h2>GROOMING</h2>
+        </a>
+    </button>  
+    <button type="button" class="sit">
+      <a routerLink="/">
+        <img src="assets/images/sit.jpg">
+        <h2>PET DAYCARE</h2>
+      </a>
+    </button>
+    <button type="button" class="walk">
+      <a routerLink="/">
+        <img src="assets/images/walk.jpg">
+        <h2>PET WALKING</h2>
+      </a>
+    </button>
+  </div>
+</nav>
