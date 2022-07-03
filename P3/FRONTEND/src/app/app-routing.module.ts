@@ -8,11 +8,11 @@ import { RegisterComponent } from './component/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  {path: 'register', component:RegisterComponent},
-  {path: 'register-customer', component:RegisterCustomerComponent},
-  {path: 'contractor-profile', component: ContractorProfileComponent},
-  {path: 'customer-profile', component: CustomerProfileComponent},
+  { path: 'component/dashboard', component: DashboardComponent },
+  {path: 'component/register', component:RegisterComponent},
+  {path: 'component/register-customer', component:RegisterCustomerComponent},
+  {path: 'component/contractor-profile', component: ContractorProfileComponent},
+  {path: 'component/customer-profile', component: CustomerProfileComponent},
 
 
   
