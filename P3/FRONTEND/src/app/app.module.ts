@@ -25,7 +25,8 @@ import { AllLoginComponent } from './component/all-login/all-login.component';
     HeaderComponent,
     FooterComponent,
     RegisterCustomerComponent,
-    AllLoginComponent
+    AllLoginComponent,
+
   ],
   imports: [
     BrowserModule,
