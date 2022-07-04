@@ -34,7 +34,7 @@
   .card-basket {
    float: left;
   }
-  
+   */
   .img {
    background-color: transparent;
    text-align: center;
@@ -43,30 +43,14 @@
   a {
    text-decoration: none;
    color: black;
-  } */
-
-  img {
-    height: 110px;
-    width: 110px;
-    clip-path: circle();
   }
-
-  .groom {
-    background-color: transparent;
-    border-style: none;
-  }
-
-  .sit {
-    background-color: transparent;
-    border-style: none;
-  }
-
-  .walk {
-    background-color: transparent;
-    border-style: none;
-  }
-
-  h2 {
-    display: inline;
-    padding-left: 20px;
+  
+  .card-img-overlay {
+    background-color: yellow;
+    opacity: .5;
+    height: 75%;
+    width: 75%;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
   }
