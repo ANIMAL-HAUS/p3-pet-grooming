@@ -13,6 +13,7 @@ export class ContractorProfileComponent implements OnInit {
   users!: Array<Users>;
   role!: Array<Role>;
   action!: string;
+
   selectedUser!: Users;
 
 
@@ -20,7 +21,7 @@ export class ContractorProfileComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.refreshData();
   }
   refreshData() {
@@ -49,7 +50,7 @@ export class ContractorProfileComponent implements OnInit {
 
   addContractor() {
     this.selectedUser = new Users();
-    this.router.navigate(['component', 'contractor-profile'], { queryParams: { action: 'view contractors' } });
+    this.router.navigate(['component', 'contractor-profile'], { queryParams: { action: 'add' } });
   }
 
 }
