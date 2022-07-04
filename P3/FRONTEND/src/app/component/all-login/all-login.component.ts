@@ -5,8 +5,7 @@ import { Observable } from 'rxjs';
 import { HttpHeaders } from '@angular/common/http';
 import { of } from 'rxjs';
 import { Router } from '@angular/router';
-import { LocalStorageService } from 'src/app/service/localStorage/local-storage.service';
-// import { User } from 'src/app/models/user';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -17,12 +16,14 @@ const httpOptions = {
   })
 };
 
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-all-login',
+  templateUrl: './all-login.component.html',
+  styleUrls: ['./all-login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class AllLoginComponent implements OnInit {
+
   // user_id!: Number;
   username!: string;
   password!: String;
