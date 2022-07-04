@@ -13,6 +13,26 @@ import { ServicesService } from 'src/app/service/services.service';
 })
 export class RegisterComponent implements OnInit {
 
+  firstName!: string;
+  lastName!: string;
+  userName!: string;
+  password!:string;
+  userRole!: Role;
+  email!: string;
+  address!: string;
+  aboutMe!: string;
+
+  users= {
+    firstName: String,
+  lastName: String,
+  userName: String,
+  password:String,
+  userRole: Role,
+  email: String,
+  address: String,
+  aboutMe: String,
+  }
+
   @Input()
   user!: Users;
   role!: Role;
@@ -21,8 +41,8 @@ export class RegisterComponent implements OnInit {
   @Output()
   userAddedEvent = new EventEmitter();
 
-  message!: string;
-  password!: string;
+  // message!: string;
+  // password!: string;
 
   constructor(private ServicesService: ServicesService,
     private router: Router) { }
@@ -40,7 +60,7 @@ export class RegisterComponent implements OnInit {
     this.ServicesService.addContractor(this.user).subscribe(
       (user) => {
         this.userAddedEvent.emit();
-        this.router.navigate(['component']);
+        this.router.navigate(['component', 'contractor-profile']);
       }
     );
   }

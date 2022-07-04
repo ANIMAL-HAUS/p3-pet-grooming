@@ -9,23 +9,46 @@ import { ServicesService } from 'src/app/service/services.service';
   styleUrls: ['./register-customer.component.css']
 })
 export class RegisterCustomerComponent implements OnInit {
-  @Input()
-  user!: Users;
-  role!: Role;
+
+  firstName!: string;
+  lastName!: string;
+  userName!: string;
+  password!:string;
+  userRole!: Role;
+  email!: string;
+  address!: string;
+  aboutMe!: string;
+
+  users= {
+    firstName: String,
+  lastName: String,
+  userName: String,
+  password:String,
+  userRole: Role,
+  email: String,
+  address: String,
+  aboutMe: String,
+  }
+  
+  // @Input()
+   user!: Users;
+  // role!: Role;
   
 
   @Output()
   userAddedEvent = new EventEmitter();
 
-  message!: string;
-  password!: string;
+  // message!: string;
+  // password!: string;
 
   constructor(private ServicesService: ServicesService,
     private router: Router) { }
 
   ngOnInit(): void {
+
   }
   addCustomer() {
+
     this.ServicesService.addCustomer(this.user).subscribe(
       (user) => {
         this.userAddedEvent.emit();
