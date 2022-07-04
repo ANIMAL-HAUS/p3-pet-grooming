@@ -1,6 +1,9 @@
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Role, Users } from 'src/app/models/Users';
+import {Users } from '../../models/Users';
+import {Role } from '../../models/Users';
+
 import { ServicesService } from 'src/app/service/services.service';
 
 @Component({
@@ -9,6 +12,7 @@ import { ServicesService } from 'src/app/service/services.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
   @Input()
   user!: Users;
   role!: Role;
@@ -24,8 +28,12 @@ export class RegisterComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    console.log('user:', Users);
 
-    console.log(Role);
+    
+    
+
+    console.log('role:', Role);
   }
 
   addContractor() {
