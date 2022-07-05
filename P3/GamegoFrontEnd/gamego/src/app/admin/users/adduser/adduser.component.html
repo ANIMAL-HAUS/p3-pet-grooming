@@ -24,7 +24,10 @@
   <input type="address" class="form-control" id="address" placeholder="address" [(ngModel)]="user.address" name="password">
 
   <label for="text">About Me</label>
-  <input type="text" class="form-control" id="aboutme" placeholder="address" [(ngModel)]="user.aboutMe" name="aboutMe">
+  <input type="text" class="form-control" id="aboutme" placeholder="address" [(ngModel)]="user.aboutme" name="aboutMe">
+
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I aggree to the <a href="">term and condition</a></label>
 
    <br>
   <button type="button" class="btn btn-success" (click)="addUser()">Save</button>
