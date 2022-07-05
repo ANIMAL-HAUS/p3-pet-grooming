@@ -33,32 +33,9 @@ public class Users {
 	private String password;
 	private String email;
 	private String address;
-	private String aboutMe;
+	private String aboutme;
 	private UserRole role;
-	public Users(String firstName, String lastName, String userName, String password, String email, String address,
-			String aboutMe, UserRole role) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.email = email;
-		this.address = address;
-		this.aboutMe = aboutMe;
-		this.role = role;
-	}
-	public String getAboutMe() {
-		return aboutMe;
-	}
-	public void setAboutMe(String aboutMe) {
-		this.aboutMe = aboutMe;
-	}
-	public UserRole getRole() {
-		return role;
-	}
-	public void setRole(UserRole role) {
-		this.role = role;
-	}
+	
 	public int getId() {
 		return id;
 	}
@@ -101,8 +78,20 @@ public class Users {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	public String getAboutme() {
+		return aboutme;
+	}
+	public void setAboutme(String aboutme) {
+		this.aboutme = aboutme;
+	}
+	public UserRole getRole() {
+		return role;
+	}
+	public void setRole(UserRole role) {
+		this.role = role;
+	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
-			String address) {
+			String address, String aboutme, UserRole role) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -111,23 +100,12 @@ public class Users {
 		this.password = password;
 		this.email = email;
 		this.address = address;
-	}
-	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.email = email;
-		this.address = address;
-	}
-	public Users() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.aboutme = aboutme;
+		this.role = role;
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(aboutMe, address, email, firstName, id, lastName, password, role, userName);
+		return Objects.hash(aboutme, address, email, firstName, id, lastName, password, role, userName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -138,7 +116,7 @@ public class Users {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(address, other.address)
+		return Objects.equals(aboutme, other.aboutme) && Objects.equals(address, other.address)
 				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
 				&& role == other.role && Objects.equals(userName, other.userName);
@@ -146,11 +124,9 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + ", email=" + email + ", address=" + address + ", aboutMe=" + aboutMe
+				+ ", password=" + password + ", email=" + email + ", address=" + address + ", aboutme=" + aboutme
 				+ ", role=" + role + "]";
 	}
-	
-	
 	
 	
 	

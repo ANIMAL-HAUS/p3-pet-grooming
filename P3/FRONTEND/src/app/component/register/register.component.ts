@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   userRole!: Role;
   email!: string;
   address!: string;
-  aboutMe!: string;
+  aboutme!: string;
 
   users= {
     firstName: String,
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
   userRole: Role,
   email: String,
   address: String,
-  aboutMe: String,
+  aboutme: String,
   }
 
   @Input()
@@ -48,7 +48,9 @@ export class RegisterComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    console.log('user:', Users);
+    
+    this.user = new Users();
+    console.log('user:', this.user);
 
     
     

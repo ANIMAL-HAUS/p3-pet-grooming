@@ -7,7 +7,7 @@ export class Users {
     userRole!: Role;
     email!: string;
     address!: string;
-    aboutMe!: string;
+    aboutme!: string;
 
 }
 export enum Role {
