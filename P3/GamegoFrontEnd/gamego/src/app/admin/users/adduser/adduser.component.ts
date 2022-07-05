@@ -25,6 +25,14 @@ export class AdduserComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    this.user = new User();
+
+    console.log('user:', this.user);
+
+    
+    
+
+    console.log('role:', Role);
   }
 
   addUser() {

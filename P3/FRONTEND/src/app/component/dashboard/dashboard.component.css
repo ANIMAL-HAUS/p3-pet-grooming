@@ -49,34 +49,6 @@ body {
   a {
    text-decoration: none;
    color: black;
-<<<<<<< HEAD
-  } */
-
-  img {
-    height: 110px;
-    width: 110px;
-    clip-path: circle();
-  }
-
-  .groom {
-    background-color: transparent;
-    border-style: none;
-  }
-
-  .sit {
-    background-color: transparent;
-    border-style: none;
-  }
-
-  .walk {
-    background-color: transparent;
-    border-style: none;
-  }
-
-  h2 {
-    display: inline;
-    padding-left: 20px;
-=======
   }
 
   .card {
@@ -101,5 +73,4 @@ body {
   h1 {
     font-size: 50px;
     line-height: 130%;
->>>>>>> origin/cody
   }

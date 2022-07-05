@@ -21,10 +21,10 @@ export class HttpClientService {
       return this.httpClient.post<User>('http://localhost:5000/petgrooming/authcontroller/contractor', newUser);   
     }
 
-    addGame(newGame: Product) {
-      console.log("add game");
-      return this.httpClient.post<Product>('http://localhost:3000/gamego/productcontroller/insertProductGame', newGame);
-    }
+    // addGame(newGame: Product) {
+    //   console.log("add game");
+    //   return this.httpClient.post<Product>('http://localhost:3000/gamego/productcontroller/insertProductGame', newGame);
+    // }
 
     // addGame(newGame: Game){
     //   return this.httpClient.post<Game>('http://localhost:3000/gamego/productcontroller/insertProductGame',newGame );
