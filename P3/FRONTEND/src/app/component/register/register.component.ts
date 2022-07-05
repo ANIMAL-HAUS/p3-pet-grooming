@@ -1,6 +1,9 @@
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Role, Users } from 'src/app/models/Users';
+import {Users } from '../../models/Users';
+import {Role } from '../../models/Users';
+
 import { ServicesService } from 'src/app/service/services.service';
 
 @Component({
@@ -9,6 +12,27 @@ import { ServicesService } from 'src/app/service/services.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  firstName!: string;
+  lastName!: string;
+  userName!: string;
+  password!:string;
+  userRole!: Role;
+  email!: string;
+  address!: string;
+  aboutMe!: string;
+
+  users= {
+    firstName: String,
+  lastName: String,
+  userName: String,
+  password:String,
+  userRole: Role,
+  email: String,
+  address: String,
+  aboutMe: String,
+  }
+
   @Input()
   user!: Users;
   role!: Role;
@@ -17,24 +41,28 @@ export class RegisterComponent implements OnInit {
   @Output()
   userAddedEvent = new EventEmitter();
 
-  message!: string;
-  password!: string;
+  // message!: string;
+  // password!: string;
 
   constructor(private ServicesService: ServicesService,
     private router: Router) { }
 
   ngOnInit(): void {
+    console.log('user:', Users);
 
-    console.log(Role);
+    
+    
+
+    console.log('role:', Role);
   }
 
-  addUser() {
-    this.ServicesService.addUser(this.user).subscribe(
+  addContractor() {
+    this.ServicesService.addContractor(this.user).subscribe(
       (user) => {
         this.userAddedEvent.emit();
-        this.router.navigate(['component']);
+        this.router.navigate(['component', 'contractor-profile']);
       }
     );
   }
-
+ 
 }

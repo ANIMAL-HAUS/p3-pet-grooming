@@ -1,1 +1,31 @@
-<p>register-customer works!</p>
+<h1>Register Contractor</h1>
+<form #recievedUser="ngForm">
+
+  <label for="name">firstName</label>
+  <input type="text" class="form-control" id="fName" placeholder="user fname" [(ngModel)]="user.firstName" name="firstName">
+  
+  <label for="name">lastName</label>
+  <input type="text" class="form-control" id="lNname" placeholder="user lname" [(ngModel)]="user.lastName" name="lastName">
+  
+
+  <label for="type">username</label>
+  <input type="text" class="form-control" id="type" placeholder="type name" [(ngModel)]="user.userName" name="name">
+
+  <label for="password">Password</label>
+  <input type="password" class="form-control" id="password" placeholder="password" [(ngModel)]="user.password" name="password">
+
+  <label for="role">Role</label>
+  <input type="role" class="form-control" id="role" placeholder="role" [(ngModel)]="user.userRole" name="role">
+
+  <label for="email">Email</label>
+  <input type="email" class="form-control" id="email" placeholder="email" [(ngModel)]="user.email" name="email">
+
+  <label for="address">Address</label>
+  <input type="address" class="form-control" id="address" placeholder="address" [(ngModel)]="user.address" name="address">
+  <label for="text">About Me</label>
+  <input type="text" class="form-control" id="aboutme" placeholder="address" [(ngModel)]="user.aboutMe" name="aboutMe">
+
+   <br>
+  <button type="button" class="btn btn-success" (click)="addCustomer()">Save</button>
+</form>
+

@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +31,15 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
-    
-  ],
+    RouterModule.forRoot([
+      {path: 'component/register', component:RegisterComponent},
+  {path: 'component/register-customer', component:RegisterCustomerComponent},
+  {path: 'component/contractor-profile', component: ContractorProfileComponent},
+  {path: 'component/customer-profile', component: CustomerProfileComponent},
+
+
+    ]),
+],
   providers: [],
   bootstrap: [AppComponent]
 })

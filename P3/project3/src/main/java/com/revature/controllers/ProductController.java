@@ -70,13 +70,13 @@ public class ProductController {
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).body(product);
 			
 	}
-	@PostMapping("/getProductByID")
-	public static ResponseEntity<Product> getProductByID(@RequestBody int id){
-		Product p = new Product();
-		p = ProductServices.getProductById(id);
-		 ResponseEntity.status(HttpStatus.CREATED).body(p);
-		 return ResponseEntity.status(200).body(p);
-	}
-	
+//	@PostMapping("/getProductByID")
+//	public static ResponseEntity<Product> getProductByID(@RequestBody int id){
+//		Product p = new Product();
+//		p = ProductServices.getProductById(id);
+//		 ResponseEntity.status(HttpStatus.CREATED).body(p);
+//		 return ResponseEntity.status(200).body(p);
+//	}
+//	
 
 }

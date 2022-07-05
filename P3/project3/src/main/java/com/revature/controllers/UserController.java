@@ -26,9 +26,15 @@ public class UserController {
 	public UserController(UserServices service) {
 		this.us= service;
 	}
-	@GetMapping("/getallusers")
-	public ResponseEntity<List<Users>> getALLUsers(){
-		List<Users> users = UserDAO.getAllUsers();
+	@GetMapping("/getallcontractors")
+	public ResponseEntity<List<Users>> getALLContractors(){
+		List<Users> users = UserDAO.getAllContractors();
+		 ResponseEntity.status(HttpStatus.CREATED).body(users);
+		 return ResponseEntity.status(200).body(users);
+}
+	@GetMapping("/getallcustomers")
+	public ResponseEntity<List<Users>> getALLCustomers(){
+		List<Users> users = UserDAO.getAllCustomers();
 		 ResponseEntity.status(HttpStatus.CREATED).body(users);
 		 return ResponseEntity.status(200).body(users);
 }

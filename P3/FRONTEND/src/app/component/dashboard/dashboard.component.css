@@ -1,4 +1,4 @@
-.main {
+/* .main {
     text-align: center;
      padding: 100px; 
    }
@@ -43,4 +43,30 @@
   a {
    text-decoration: none;
    color: black;
+  } */
+
+  img {
+    height: 110px;
+    width: 110px;
+    clip-path: circle();
+  }
+
+  .groom {
+    background-color: transparent;
+    border-style: none;
+  }
+
+  .sit {
+    background-color: transparent;
+    border-style: none;
+  }
+
+  .walk {
+    background-color: transparent;
+    border-style: none;
+  }
+
+  h2 {
+    display: inline;
+    padding-left: 20px;
   }

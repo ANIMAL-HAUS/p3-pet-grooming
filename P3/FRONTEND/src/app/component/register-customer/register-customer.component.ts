@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { Users, Role } from 'src/app/models/Users';
+import { ServicesService } from 'src/app/service/services.service';
 
 @Component({
   selector: 'app-register-customer',
@@ -7,9 +10,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterCustomerComponent implements OnInit {
 
-  constructor() { }
+  firstName!: string;
+  lastName!: string;
+  userName!: string;
+  password!:string;
+  userRole!: Role;
+  email!: string;
+  address!: string;
+  aboutMe!: string;
+
+  users= {
+    firstName: String,
+  lastName: String,
+  userName: String,
+  password:String,
+  userRole: Role,
+  email: String,
+  address: String,
+  aboutMe: String,
+  }
+  
+  // @Input()
+   user!: Users;
+  // role!: Role;
+  
+
+  @Output()
+  userAddedEvent = new EventEmitter();
+
+  // message!: string;
+  // password!: string;
+
+  constructor(private ServicesService: ServicesService,
+    private router: Router) { }
 
   ngOnInit(): void {
-  }
 
+  }
+  addCustomer() {
+
+    this.ServicesService.addCustomer(this.user).subscribe(
+      (user) => {
+        this.userAddedEvent.emit();
+        this.router.navigate(['component']);
+      }
+    );
+  }
 }
