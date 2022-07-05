@@ -99,6 +99,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": false
+=======
+    "analytics": "5964ab4f-77d6-4c7b-a992-02703726e6ce"
+>>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
   }
 }

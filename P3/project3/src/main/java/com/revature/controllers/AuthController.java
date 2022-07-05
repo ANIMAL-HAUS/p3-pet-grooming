@@ -62,7 +62,6 @@ public class AuthController {
 		}else {
 			user.setRole(UserRole.Contractor);
 			as.insertUser(user);
-			
 			return ResponseEntity.status(HttpStatus.CREATED).body(user);
 		}
 		
