@@ -35,22 +35,42 @@
    float: left;
   }
    */
-  .img {
-   background-color: transparent;
-   text-align: center;
-  }
+
+ 
+  
+body {
+  background-image: url(/assets/images/paws.png);
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+ 
   
   a {
    text-decoration: none;
    color: black;
   }
+
+  .card {
+    border-style: none;
+    background-color: transparent;
+   height: auto;
+   width: 70%;
+   position: relative;
+  }
+
   
   .card-img-overlay {
     background-color: yellow;
-    opacity: .5;
-    height: 75%;
-    width: 75%;
+    opacity: .8;
+    height: 40%;
+    width: 60%;
     text-align: center;
-    margin-left: 120px;
-    margin-right: 120px;
+    position: absolute;
+    top: 50%;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 130%;
   }
