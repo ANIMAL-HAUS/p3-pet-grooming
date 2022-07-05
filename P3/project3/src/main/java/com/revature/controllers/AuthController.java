@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +11,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.revature.models.Product;
 import com.revature.models.UserRole;
 import com.revature.models.Users;
 import com.revature.repository.UserDAO;
 import com.revature.services.AuthenticationServices;
+import com.revature.services.ProductServices;
+import com.revature.services.UserServices;
 
 
 @Controller
@@ -26,6 +32,13 @@ public class AuthController {
 	public AuthController(AuthenticationServices service) {
 		this.as = service;
 	}
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public List<Users> getAllHouses(){
+		return UserServices.getAllUsers();
+	}
+	
+	
 	@PostMapping
 	public ResponseEntity<Users> insertUser(@RequestBody Users user){
 		System.out.println(user.getPassword());

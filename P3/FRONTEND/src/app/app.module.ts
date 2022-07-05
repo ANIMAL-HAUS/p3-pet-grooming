@@ -39,7 +39,7 @@ import { AllLoginComponent } from './component/all-login/all-login.component';
   {path: 'component/register-customer', component:RegisterCustomerComponent},
   {path: 'component/contractor-profile', component: ContractorProfileComponent},
   {path: 'component/customer-profile', component: CustomerProfileComponent},
-
+  {path: 'dashboard', component: DashboardComponent},
 
     ]),
 ],

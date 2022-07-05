@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs';
-import { Observable } from 'rxjs';
+
 import { HttpHeaders } from '@angular/common/http';
-import { of } from 'rxjs';
+
 import { Router } from '@angular/router';
 
 
