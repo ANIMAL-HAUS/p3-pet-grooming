@@ -33,9 +33,11 @@ public class Users {
 	private String password;
 	private String email;
 	private String address;
-	private String aboutMe;
 	private UserRole role;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
 	public int getId() {
 		return id;
 	}
@@ -78,18 +80,22 @@ public class Users {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+<<<<<<< HEAD
 	public String getaboutMe() {
 		return aboutMe;
 	}
 	public void setaboutMe(String aboutMe) {
 		this.aboutMe = aboutMe;
 	}
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
 	public UserRole getRole() {
 		return role;
 	}
 	public void setRole(UserRole role) {
 		this.role = role;
 	}
+<<<<<<< HEAD
 	
 	
 	public Users() {
@@ -104,9 +110,33 @@ public class Users {
 		this.password = password;
 		this.email = email;
 		this.address = address;
+=======
+	@Override
+	public int hashCode() {
+		return Objects.hash(address, email, firstName, id, lastName, password, role, userName);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Users other = (Users) obj;
+		return Objects.equals(address, other.address) && Objects.equals(email, other.email)
+				&& Objects.equals(firstName, other.firstName) && id == other.id
+				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
+				&& role == other.role && Objects.equals(userName, other.userName);
+	}
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+				+ ", password=" + password + ", email=" + email + ", address=" + address + ", role=" + role + "]";
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
-			String address) {
+			String address, UserRole role) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -115,6 +145,7 @@ public class Users {
 		this.password = password;
 		this.email = email;
 		this.address = address;
+		this.role = role;
 	}
 	public Users(String firstName, String lastName, String userName, String password, String email, String address,
 			String aboutMe, UserRole role) {
@@ -141,30 +172,7 @@ public class Users {
 		this.aboutMe = aboutMe;
 		this.role = role;
 	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(aboutMe, address, email, firstName, id, lastName, password, role, userName);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Users other = (Users) obj;
-		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(address, other.address)
-				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
-				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
-				&& role == other.role && Objects.equals(userName, other.userName);
-	}
-	@Override
-	public String toString() {
-		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + ", email=" + email + ", address=" + address + ", aboutMe=" + aboutMe
-				+ ", role=" + role + "]";
-	}
+	
 	
 	
 	

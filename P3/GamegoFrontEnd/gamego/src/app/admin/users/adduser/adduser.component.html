@@ -1,34 +1,38 @@
 <h1>Register as Contractor</h1>
-<form #recievedUser="ngForm">
+<form #recievedUser="ngForm" (ngSubmit)="OnUserCreate(recievedUser.value)">
 
   <label for="name">firstName</label>
-  <input type="text" class="form-control" id="fName" placeholder="user fname" [(ngModel)]="user.firstName" name="firstName">
+  <input type="text" class="form-control" id="fName" placeholder="user fname" ngModel>
   
   <label for="name">lastName</label>
-  <input type="text" class="form-control" id="lNname" placeholder="user lname" [(ngModel)]="user.lastName" name="lastName">
+  <input type="text" class="form-control" id="lNname" placeholder="user lname" ngModel>
   
 
   <label for="type">username</label>
-  <input type="text" class="form-control" id="type" placeholder="type name" [(ngModel)]="user.userName" name="name">
+  <input type="text" class="form-control" id="type" placeholder="type name" ngModel>
 
   <label for="password">Password</label>
-  <input type="password" class="form-control" id="password" placeholder="password" [(ngModel)]="user.password" name="password">
+  <input type="password" class="form-control" id="password" placeholder="password" ngModel>
 
   <label for="role">Role</label>
-  <input type="role" class="form-control" id="role" placeholder="role" [(ngModel)]="user.userEnum" name="role">
+  <input type="role" class="form-control" id="role" placeholder="role" ngModel>
 
   <label for="email">Email</label>
-  <input type="email" class="form-control" id="email" placeholder="email" [(ngModel)]="user.email" name="email">
+  <input type="email" class="form-control" id="email" placeholder="email" ngModel>
 
   <label for="address">Address</label>
-  <input type="address" class="form-control" id="address" placeholder="address" [(ngModel)]="user.address" name="password">
+  <input type="address" class="form-control" id="address" placeholder="address" ngModel>
 
   <label for="text">About Me</label>
+<<<<<<< HEAD
   <input type="aboutme" class="form-control" id="aboutme" placeholder="aboutMe" [(ngModel)]="user.aboutMe" name="aboutme">
 
   <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
   <label for="vehicle1"> I aggree to the <a href="">term and condition</a></label>
+=======
+  <input type="text" class="form-control" id="aboutme" placeholder="aboutMe"  ngModel>
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
 
    <br>
-  <button type="button" class="btn btn-success" (click)="addUser()">Save</button>
+  <!--<button type="button" class="btn btn-success" >Save</button>-->
 </form>
