@@ -49,7 +49,7 @@ body {
   a {
    text-decoration: none;
    color: black;
-<<<<<<< HEAD
+
   } */
 
   img {
@@ -76,7 +76,7 @@ body {
   h2 {
     display: inline;
     padding-left: 20px;
-=======
+
   }
 
   .card {
@@ -101,5 +101,5 @@ body {
   h1 {
     font-size: 50px;
     line-height: 130%;
->>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
+
   }
