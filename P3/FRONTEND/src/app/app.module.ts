@@ -6,24 +6,26 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ContractorProfileComponent } from './component/contractor-profile/contractor-profile.component';
 
-//import { DashboardComponent } from './component/dashboard/dashboard.component';
-//import { HeaderComponent } from './component/header/header.component';
+
 import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { HeaderComponent } from './component/header/header.component';
+import { GroomingComponent } from './component/grooming/grooming.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    ContractorProfileComponent,
-  
-    // DashboardComponent,
-    // HeaderComponent,
+    ContractorProfileComponent, 
     FooterComponent,
-    RegisterCustomerComponent
+    RegisterCustomerComponent,
+    DashboardComponent,
+    HeaderComponent,
+    GroomingComponent
   ],
   imports: [
     BrowserModule,
