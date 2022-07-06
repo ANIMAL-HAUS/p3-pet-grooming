@@ -32,9 +32,11 @@ public class Users {
 	@Column(nullable = false)
 	private String password;
 	private String email;
-	private String address;
+	private String city;
 	private UserRole role;
 	private String aboutMe;
+	private List<String> days;
+	private List<String> hours;
 	public Users(String firstName, String lastName, String userName, String password, String email, String address,
 			UserRole role, String aboutMe) {
 		super();
@@ -43,7 +45,7 @@ public class Users {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.address = address;
+		this.city = address;
 		this.role = role;
 		this.aboutMe = aboutMe;
 	}
@@ -62,7 +64,7 @@ public class Users {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.address = address;
+		this.city = address;
 		this.role = role;
 		this.aboutMe = aboutMe;
 	}
@@ -103,10 +105,10 @@ public class Users {
 		this.email = email;
 	}
 	public String getAddress() {
-		return address;
+		return city;
 	}
 	public void setAddress(String address) {
-		this.address = address;
+		this.city = address;
 	}
 	public UserRole getRole() {
 		return role;
@@ -116,7 +118,7 @@ public class Users {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(aboutMe, address, email, firstName, id, lastName, password, role, userName);
+		return Objects.hash(aboutMe, city, email, firstName, id, lastName, password, role, userName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -127,7 +129,7 @@ public class Users {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(address, other.address)
+		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(city, other.city)
 				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
 				&& role == other.role && Objects.equals(userName, other.userName);
@@ -135,7 +137,7 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + ", email=" + email + ", address=" + address + ", role=" + role
+				+ ", password=" + password + ", email=" + email + ", address=" + city + ", role=" + role
 				+ ", aboutMe=" + aboutMe + "]";
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
@@ -147,7 +149,7 @@ public class Users {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.address = address;
+		this.city = address;
 		this.role = role;
 	}
 	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
@@ -157,7 +159,7 @@ public class Users {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.address = address;
+		this.city = address;
 	}
 	public Users() {
 		super();

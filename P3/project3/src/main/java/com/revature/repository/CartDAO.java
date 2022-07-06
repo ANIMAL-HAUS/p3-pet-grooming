@@ -45,8 +45,7 @@ public static double checkout(int userId, List<Product> p2) {
 			for (Product p : p2) {
 				double temp =  (p.getPrice() * tax);
 				amount += temp;
-				OrderHistory oh = new OrderHistory(userId,p.getId());
-				ses.save(oh);
+				
 			}
 			clearAllItems();
 			HibernateUtil.closeSession(); //This closes the session which will help prevent a memory leak issue
