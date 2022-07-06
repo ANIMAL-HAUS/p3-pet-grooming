@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Users } from 'src/app/models/Users';
+import { Role, Users } from '../../models/Users';
 import { ServicesService } from 'src/app/service/services.service';
 
 @Component({
@@ -11,7 +11,9 @@ import { ServicesService } from 'src/app/service/services.service';
 export class ContractorProfileComponent implements OnInit {
   
   users!: Array<Users>;
+  role!: Array<Role>;
   action!: string;
+
   selectedUser!: Users;
 
 
@@ -19,11 +21,11 @@ export class ContractorProfileComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.refreshData();
   }
   refreshData() {
-    this.ServicesService.getUsers().subscribe(
+    this.ServicesService.getContractors().subscribe(
       response => this.handleSuccessfulResponse(response),
     );
 

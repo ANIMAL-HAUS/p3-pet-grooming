@@ -8,8 +8,12 @@ import { ServicesService } from 'src/app/service/services.service';
   templateUrl: './customer-profile.component.html',
   styleUrls: ['./customer-profile.component.css']
 })
+<<<<<<< HEAD
+export class CustomerProfileComponent implements OnInit {
+=======
 export class ContractorProfileComponent implements OnInit {
   
+>>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
   users!: Array<Users>;
   action!: string;
   selectedUser!: Users;
@@ -23,7 +27,11 @@ export class ContractorProfileComponent implements OnInit {
     this.refreshData();
   }
   refreshData() {
+<<<<<<< HEAD
+    this.ServicesService.getContractors().subscribe(
+=======
     this.ServicesService.getUsers().subscribe(
+>>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
       response => this.handleSuccessfulResponse(response),
     );
 
@@ -37,6 +45,10 @@ export class ContractorProfileComponent implements OnInit {
     );
   }
   
+<<<<<<< HEAD
+  viewContractor(id: number) {
+    this.router.navigate(['component', 'customer-profile'], {queryParams : {id, action: 'view'}});
+=======
   viewCustomer(id: number) {
     this.router.navigate(['component', 'customer-profile'], {queryParams : {id, action: 'view'}});
   }
@@ -49,6 +61,18 @@ export class ContractorProfileComponent implements OnInit {
   addCustomer() {
     this.selectedUser = new Users();
     this.router.navigate(['component', 'customer-profile'], { queryParams: { action: 'add' } });
+>>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
   }
+
+  handleSuccessfulResponse(response: Users[]) {
+    this.users = response;
+    console.log(this.users);
+  }
+
+  addCustomer() {
+    this.selectedUser = new Users();
+    this.router.navigate(['component', 'customer-profile'], { queryParams: { action: 'add' } });
+  }
+
 
 }
