@@ -14,23 +14,23 @@ import com.revature.utilities.HibernateUtil;
 public class OrderHistoryDAO{
 	public List<OrderHistory> getAllOrderHistory(){
 		try(Session ses = HibernateUtil.getSession()){
-			List<OrderHistory> movieList = ses.createQuery("FROM OrderHistory").list();
+			List<OrderHistory> orderList = ses.createQuery("FROM OrderHistory").list();
 			HibernateUtil.closeSession();
-			return movieList;
+			return orderList;
 		}
 		catch(HibernateException e) {
-			System.out.println("There was an error getting all WishList");
+			System.out.println("There was an error getting all OrderList");
 			return null;
 		}
 	}
 	public OrderHistory getOrderHistoryByOrderHistoryId(int orderId){
 		try(Session ses = HibernateUtil.getSession()){
-			OrderHistory movie = ses.get(OrderHistory.class, orderId);
+			OrderHistory order = ses.get(OrderHistory.class, orderId);
 			HibernateUtil.closeSession();
-			return movie;
+			return order;
 		}
 		catch(HibernateException e) {
-			System.out.println("There was an error getting OrderHistory by WishList Id");
+			System.out.println("There was an error getting OrderHistory by OrderList Id");
 			return null;
 		}
 	}
@@ -38,9 +38,9 @@ public class OrderHistoryDAO{
 		try(Session ses = HibernateUtil.getSession()){
 			Query q = ses.createQuery("FROM WishList p WHERE p.user.user_id = ?0");
 			q.setParameter(0, id);
-			List<OrderHistory> movieList = q.getResultList();
+			List<OrderHistory> orderList = q.getResultList();
 			HibernateUtil.closeSession();
-			return movieList;
+			return orderList;
 		}
 		catch(HibernateException e) {
 			System.out.println("There was an error getting OrderHistory by User Id");
@@ -48,30 +48,30 @@ public class OrderHistoryDAO{
 		}
 		
 	}
-	public List<OrderHistory> getOrderHistoryProductId(int product){
+	public List<OrderHistory> getOrderHistoryProductId(int id){
 		try(Session ses = HibernateUtil.getSession()){
-			Query q = ses.createQuery("FROM WishList p WHERE p.pokemon_id = ?0");
-			q.setParameter(0, product);
-			List<OrderHistory> movieList = q.getResultList();
+			Query q = ses.createQuery("FROM OrderList p WHERE p.id = ?0");
+			q.setParameter(0, id);
+			List<OrderHistory> orderList = q.getResultList();
 			HibernateUtil.closeSession();
-			return movieList;
+			return orderList;
 		}
 		catch(HibernateException e) {
 			System.out.println("There was an error getting Order History by product Id");
 			return null;
 		}
 	}
-//	public int insertproduct( OrderHistory or) {
-//		try(Session ses = HibernateUtil.getSession()){
-//			ses.save(or);
-//			HibernateUtil.closeSession();
-//			return 1;
-//		}
-//		catch(HibernateException e) {
-//			System.out.println("There was an error inserting into the WishList");
-//			return 0;
-//		}
-//	}
+	public int insertproduct( OrderHistory or) {
+		try(Session ses = HibernateUtil.getSession()){
+			ses.save(or);
+			HibernateUtil.closeSession();
+			return 1;
+		}
+		catch(HibernateException e) {
+			System.out.println("There was an error inserting into the OrderList");
+			return 0;
+		}
+	}
 	public int updateOrderHistory(OrderHistory or) {
 		try(Session ses = HibernateUtil.getSession()){
 			Transaction tran = ses.beginTransaction();
@@ -96,7 +96,7 @@ public class OrderHistoryDAO{
 			return 1;
 		}
 		catch(HibernateException e) {
-			System.out.println("There was an error updating the WishList");
+			System.out.println("There was an error updating the OrderList");
 			return 0;
 		}
 	}

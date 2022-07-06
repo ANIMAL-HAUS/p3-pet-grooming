@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 
 
 public enum Categories {
-	Walking,Grooming,  DayCare;
+	Walking, Grooming,  DayCare;
 
 }

@@ -4,6 +4,8 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,12 +20,10 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-
+    @Enumerated(EnumType.STRING)
 	private Categories productType;
 	@Column(nullable = false, unique=true)
     private String Description;
-	private Categories product;
-	
 	@Column(nullable = false)
 	private Double price;
 	
@@ -39,20 +39,18 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(int id, Categories product, String description, Double price) {
+	public Product(int id, Categories productType, String description, Double price) {
 		super();
 		this.id = id;
-		this.product = product;
+		this.productType = productType;
 		Description = description;
 		this.price = price;
 		
 	}
-	public Product(Categories product, String description, Double price) {
+	public Product(Categories productType, String description, Double price) {
 		super();
 
-		this.productType = product;
-
-		this.product = product;
+		this.productType = productType;
 		Description = description;
 		this.price = price;
 	}
@@ -67,8 +65,8 @@ public class Product {
 		return productType;
 	}
 
-	public void setProduct(Categories product) {
-		this.product = product;
+	public void setProduct(Categories productType) {
+		this.productType = productType;
 	}
 	
 	public String getDescription() {
@@ -109,7 +107,7 @@ public class Product {
 	
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", product=" + product + ", Description=" + Description + ", price=" + price + "]";
+		return "Product [id=" + id + ", product=" + productType + ", Description=" + Description + ", price=" + price + "]";
 
 	}
 	

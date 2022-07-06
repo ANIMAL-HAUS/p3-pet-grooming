@@ -8,6 +8,8 @@ import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,20 +24,21 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name = "OrderHistory")
-public class OrderHistory {
+@Table(name = "Order History")
+ public class OrderHistory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderId;
-	private Categories product;
+	@Enumerated(EnumType.STRING)
+	private Categories productType;
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id", nullable = false)
 	private User user;
 	
-	public OrderHistory(int orderId, Categories product, User user) {
+	public OrderHistory(int orderId, Categories productType, User user) {
 		super();
 		this.orderId = orderId;
-		this.product = product;
+		this.productType = productType;
 		this.user = user;
 	}
 
@@ -53,11 +56,11 @@ public class OrderHistory {
 	}
 
 	public Categories getProduct() {
-		return product;
+		return productType;
 	}
 
-	public void setProduct(Categories product) {
-		this.product = product;
+	public void setProduct(Categories productType) {
+		this.productType = productType;
 	}
 
 	public User getUser() {
@@ -70,7 +73,7 @@ public class OrderHistory {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(orderId, product, user);
+		return Objects.hash(orderId, productType, user);
 	}
 
 	@Override
@@ -82,12 +85,12 @@ public class OrderHistory {
 		if (getClass() != obj.getClass())
 			return false;
 		OrderHistory other = (OrderHistory) obj;
-		return orderId == other.orderId && product == other.product && Objects.equals(user, other.user);
+		return orderId == other.orderId && productType == other.productType && Objects.equals(user, other.user);
 	}
 
 	@Override
 	public String toString() {
-		return "OrderHistory [orderId=" + orderId + ", product=" + product + ", user=" + user + "]";
+		return "OrderHistory [orderId=" + orderId + ", product=" + productType + ", user=" + user + "]";
 	}
 	
 }

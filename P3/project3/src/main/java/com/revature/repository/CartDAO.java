@@ -8,6 +8,7 @@ import javax.persistence.Query;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
+import com.revature.models.Cart;
 import com.revature.models.OrderHistory;
 import com.revature.models.Product;
 import com.revature.models.Users;
@@ -57,13 +58,13 @@ public static double checkout(int userId, List<Product> p2) {
 			}
 		return 0;
 	}
-public static List<OrderHistory> getOrderbyUserID(int userId) {
+public static List<Cart> getOrderbyUserID(int id) {
 	Session ses = HibernateUtil.getSession(); //This opens the session
 
-	Query q = ses.createQuery("FROM OrderHistory WHERE userid = ?1");
-	q.setParameter(1,userId);
+	Query q = ses.createQuery("FROM Cart WHERE id = ?1");
+	q.setParameter(1,id);
 	try {
-		List<OrderHistory> orderList = q.getResultList();
+		List<Cart> orderList = q.getResultList();
 		HibernateUtil.closeSession();
 		//OrderHistory oh = orderList.get(0);
 		//System.out.println(" exist");

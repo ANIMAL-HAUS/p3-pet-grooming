@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.revature.models.Cart;
 import com.revature.models.OrderHistory;
 import com.revature.models.Product;
 import com.revature.models.Users;
@@ -79,16 +80,16 @@ public class CartController {
 		}
 }	
 	@PostMapping("/getOrderHistory")
-	public static ResponseEntity<List<OrderHistory>> getOrderHisoty(@RequestBody int userid){
+	public static ResponseEntity<List<Cart>> getOrderHisoty(@RequestBody int id){
 		//System.out.println(product.getId());
 	
-		if(userid == 0) {
+		if(id == 0) {
 			System.out.println("--------------------------------");
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
 			
 		}else {	
 
-			List<OrderHistory> oh = cs.getOrderHistory(userid);
+			List<Cart> oh = cs.getOrderHistory(id);
 			return ResponseEntity.status(HttpStatus.OK).body(oh);
 		}
 	}}

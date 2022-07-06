@@ -7,6 +7,8 @@ import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,10 +35,11 @@ public class Users {
 	private String password;
 	private String email;
 	private String address;
-	private String aboutMe;
+	private String aboutme;
+	@Enumerated(EnumType.STRING)
 	private UserRole role;
 	public Users(String firstName, String lastName, String userName, String password, String email, String address,
-			String aboutMe, UserRole role) {
+			String aboutme, UserRole role) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -44,14 +47,14 @@ public class Users {
 		this.password = password;
 		this.email = email;
 		this.address = address;
-		this.aboutMe = aboutMe;
+		this.aboutme = aboutme;
 		this.role = role;
 	}
 	public String getAboutMe() {
-		return aboutMe;
+		return aboutme;
 	}
 	public void setAboutMe(String aboutMe) {
-		this.aboutMe = aboutMe;
+		this.aboutme = aboutMe;
 	}
 	public UserRole getRole() {
 		return role;
@@ -127,7 +130,7 @@ public class Users {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(aboutMe, address, email, firstName, id, lastName, password, role, userName);
+		return Objects.hash(aboutme, address, email, firstName, id, lastName, password, role, userName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -138,7 +141,7 @@ public class Users {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(address, other.address)
+		return Objects.equals(aboutme, other.aboutme) && Objects.equals(address, other.address)
 				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
 				&& role == other.role && Objects.equals(userName, other.userName);
@@ -146,7 +149,7 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + ", email=" + email + ", address=" + address + ", aboutMe=" + aboutMe
+				+ ", password=" + password + ", email=" + email + ", address=" + address + ", aboutMe=" + aboutme
 				+ ", role=" + role + "]";
 	}
 	

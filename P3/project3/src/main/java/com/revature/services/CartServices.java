@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.revature.models.Cart;
 import com.revature.models.OrderHistory;
 import com.revature.models.Product;
 import com.revature.models.Users;
@@ -56,7 +57,7 @@ public class CartServices {
 		Users user =us.getUserById(userid);
 		return CartDAO.checkout(user.getId(),p);
 	}
-	public List<OrderHistory> getOrderHistory(int userId){
+	public List<Cart> getOrderHistory(int userId){
 		return CartDAO.getOrderbyUserID(userId);
 	}
 }

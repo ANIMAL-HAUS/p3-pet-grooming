@@ -6,10 +6,10 @@ import com.revature.models.OrderHistory;
 import com.revature.repository.OrderHistoryDAO;
 
 public class OrderHistoryServices {
-	OrderHistoryDAO or = new OrderHistoryDAO();
+	OrderHistoryDAO ord = new OrderHistoryDAO();
 	
 	public List<OrderHistory> getAllOrderHistory() throws Exception {
-		List<OrderHistory> result = or.getAllOrderHistory();
+		List<OrderHistory> result = ord.getAllOrderHistory();
 		if(result.get(0).getOrderId() != 0) {
 			return result;
 		}
@@ -18,7 +18,7 @@ public class OrderHistoryServices {
 		}
 	}
 	public OrderHistory getOrderHistoryByOrderHistoryId(int orderId) throws Exception {
-		OrderHistory result = or.getOrderHistoryByOrderHistoryId(orderId);
+		OrderHistory result = ord.getOrderHistoryByOrderHistoryId(orderId);
 		if(result.getOrderId() != 0) {
 			return result;
 		}
@@ -27,7 +27,7 @@ public class OrderHistoryServices {
 		}
 	}
 	public List<OrderHistory> getOrderHistoryByUserId(int id) throws Exception {
-		List<OrderHistory> result = or.getOrderHistoryByUserId(id);
+		List<OrderHistory> result = ord.getOrderHistoryByUserId(id);
 		if(result.get(0).getOrderId() != 0) {
 			return result;
 		}
@@ -36,7 +36,7 @@ public class OrderHistoryServices {
 		}
 	}
 	public List<OrderHistory> getOrderHistoryByProductId(int id) throws Exception {
-		List<OrderHistory> result = or.getOrderHistoryProductId(id);
+		List<OrderHistory> result = ord.getOrderHistoryProductId(id);
 		if(result.get(0).getOrderId() != 0) {
 			return result;
 		}
@@ -44,20 +44,20 @@ public class OrderHistoryServices {
 			throw new Exception();
 		}
 	}
-//	public void insertOrderHistory(OrderHistory orderhistory) throws Exception {
-//		int result = or.);
-//		if(result == 0) {
-//			throw new Exception();
-//		}
-//	}
+	public void insertOrderHistory(OrderHistory orderhistory) throws Exception {
+		int result = ord.insertproduct(orderhistory);
+		if(result == 0) {
+			throw new Exception();
+		}
+	}
 	public void updateOrderList(OrderHistory orderhistory) throws Exception {
-		int result = or.updateOrderHistory(orderhistory);
+		int result = ord.updateOrderHistory(orderhistory);
 		if(result == 0) {
 			throw new Exception();
 		}
 	}
 	public void deleteOrderHistory(int id) throws Exception {
-		int result = or.deleteOrderHistory(id);
+		int result = ord.deleteOrderHistory(id);
 		if (result == 0) {
 			throw new Exception();
 		}
