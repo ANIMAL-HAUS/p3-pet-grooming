@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ContractorProfileComponent } from './component/contractor-profile/contractor-profile.component';
-import { CustomerProfileComponent } from './component/customer-profile/customer-profile.component';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { HeaderComponent } from './component/header/header.component';
+
+//import { DashboardComponent } from './component/dashboard/dashboard.component';
+//import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -19,9 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     RegisterComponent,
     ContractorProfileComponent,
-    CustomerProfileComponent,
-    DashboardComponent,
-    HeaderComponent,
+  
+    // DashboardComponent,
+    // HeaderComponent,
     FooterComponent,
     RegisterCustomerComponent
   ],
@@ -35,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'component/register', component:RegisterComponent},
   {path: 'component/register-customer', component:RegisterCustomerComponent},
   {path: 'component/contractor-profile', component: ContractorProfileComponent},
-  {path: 'component/customer-profile', component: CustomerProfileComponent},
+  // {path: 'component/customer-profile', component: CustomerProfileComponent},
 
 
     ]),
