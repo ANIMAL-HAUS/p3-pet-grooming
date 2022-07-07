@@ -23,7 +23,7 @@
         <!-- Anyone remember what setting our hbm2ddl.auto to create will do? -->
 
         <!-- We will map our classes here -->
-        <!--<mapping class="com.revature.models.Users"/>-->
+        <mapping class="com.revature.models.Users"/>
         <mapping class="com.revature.models.Product"/>
         
 

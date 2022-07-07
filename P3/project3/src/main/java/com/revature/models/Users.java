@@ -35,8 +35,43 @@ public class Users {
 	private String city;
 	private UserRole role;
 	private String aboutMe;
-	private List<String> days;
-	private List<String> hours;
+	private TimeofDay time;
+	private Days day;
+	
+	
+	
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public TimeofDay getTime() {
+		return time;
+	}
+	public void setTime(TimeofDay time) {
+		this.time = time;
+	}
+	public Days getDay() {
+		return day;
+	}
+	public void setDay(Days day) {
+		this.day = day;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+	}
 	public Users(String firstName, String lastName, String userName, String password, String email, String address,
 			UserRole role, String aboutMe) {
 		super();
@@ -118,7 +153,7 @@ public class Users {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(aboutMe, city, email, firstName, id, lastName, password, role, userName);
+		return Objects.hash(aboutMe, city, day, email, firstName, id, lastName, password, role, time, userName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -129,16 +164,16 @@ public class Users {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(city, other.city)
+		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(city, other.city) && day == other.day
 				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
-				&& role == other.role && Objects.equals(userName, other.userName);
+				&& role == other.role && time == other.time && Objects.equals(userName, other.userName);
 	}
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + ", email=" + email + ", address=" + city + ", role=" + role
-				+ ", aboutMe=" + aboutMe + "]";
+				+ ", password=" + password + ", email=" + email + ", city=" + city + ", role=" + role + ", aboutMe="
+				+ aboutMe + ", time=" + time + ", day=" + day + "]";
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
 			String address, UserRole role) {
