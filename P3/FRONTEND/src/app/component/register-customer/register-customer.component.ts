@@ -32,7 +32,7 @@ export class RegisterCustomerComponent implements OnInit {
   
   // @Input()
    user!: Users;
-  // role!: Role;
+   role!: Role;
   
 
   @Output()
@@ -45,6 +45,14 @@ export class RegisterCustomerComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+
+    this.user = new Users();
+    console.log('user:', this.user);
+
+    
+    
+
+    console.log('role:', Role);
 
   }
   addCustomer() {

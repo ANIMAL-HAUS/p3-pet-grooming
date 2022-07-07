@@ -13,3 +13,24 @@ export class Users {
 export enum Role {
     Contractor,
     Customer}
+export enum Categories{
+    Walking,
+    Grooming,
+    DayCare
+}
+
+export enum Days{
+    Weekends, 
+    WeekDays, 
+    AnyDay
+
+
+}
+export enum TimeofDay{
+
+    Morning,
+    Afternoon,
+    night,
+    Anytime
+
+}

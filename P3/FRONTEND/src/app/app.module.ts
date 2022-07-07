@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
 import { GroomingComponent } from './component/grooming/grooming.component';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GroomingComponent } from './component/grooming/grooming.component';
     RegisterCustomerComponent,
     DashboardComponent,
     HeaderComponent,
-    GroomingComponent
+    GroomingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
