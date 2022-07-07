@@ -38,6 +38,71 @@
 
   .navbar {
     margin: 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .logo {
+    float: left;
+    text-decoration: none;
+    color: black;
+  }
+  
+
+  img {
+    height: 120px;
+    width: 120px;
+    clip-path: circle();
+  }
+
+  .groom {
+    background-color: transparent;
+    border-style: none;
+    color: black;
+  }
+
+  .sit {
+    background-color: transparent;
+    border-style: none;
+    color: black;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .walk {
+    background-color: transparent;
+    border-style: none;
+    color: black;
+  }
+
+  h2 {
+    display: inline;
+    padding-left: 20px;
+  }
+
+  .login {
+    background-color: white;
+    border-color: rgb(0, 136, 255);
+    border-style: solid;
+    margin-right: 20px;
+  }
+
+  .register {
+    background-color: white;
+    border-color: blue;
+    border-style: solid;
+  }
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
   }
   
   .logo {
@@ -96,3 +161,10 @@
   .container {
     display: inline-block;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6

@@ -16,6 +16,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
 import { GroomingComponent } from './component/grooming/grooming.component';
 import { LoginComponent } from './component/login/login.component';
+import { AllLoginComponent } from './component/all-login/all-login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,11 @@ import { LoginComponent } from './component/login/login.component';
     DashboardComponent,
     HeaderComponent,
     GroomingComponent,
-    LoginComponent
+    LoginComponent,
+    
+    RegisterCustomerComponent,
+    AllLoginComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,8 +44,8 @@ import { LoginComponent } from './component/login/login.component';
       {path: 'component/register', component:RegisterComponent},
   {path: 'component/register-customer', component:RegisterCustomerComponent},
   {path: 'component/contractor-profile', component: ContractorProfileComponent},
-  // {path: 'component/customer-profile', component: CustomerProfileComponent},
-
+  
+  {path: 'dashboard', component: DashboardComponent},
 
     ]),
 ],

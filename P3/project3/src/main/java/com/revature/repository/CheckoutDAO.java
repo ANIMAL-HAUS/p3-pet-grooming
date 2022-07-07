@@ -21,8 +21,7 @@ public class CheckoutDAO {
 		double amount = 0;
 		double tax = .08;
 		for (Product pr : product) {
-			history.setProductId(pr.getId());
-			history.setUserId(user);
+			
 			double temp =  (pr.getPrice() * tax);
 			amount += temp;
 		}

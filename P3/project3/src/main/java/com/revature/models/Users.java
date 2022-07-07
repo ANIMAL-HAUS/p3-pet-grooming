@@ -32,12 +32,84 @@ public class Users {
 	@Column(nullable = false)
 	private String password;
 	private String email;
-	private String address;
+	private String city;
 	private UserRole role;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	
 =======
 >>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+=======
+	private String aboutMe;
+	private TimeofDay time;
+	private Days day;
+	
+	
+	
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public TimeofDay getTime() {
+		return time;
+	}
+	public void setTime(TimeofDay time) {
+		this.time = time;
+	}
+	public Days getDay() {
+		return day;
+	}
+	public void setDay(Days day) {
+		this.day = day;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String address,
+			UserRole role, String aboutMe) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = address;
+		this.role = role;
+		this.aboutMe = aboutMe;
+	}
+	public String getAboutMe() {
+		return aboutMe;
+	}
+	public void setAboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+	public Users(int id, String firstName, String lastName, String userName, String password, String email,
+			String address, UserRole role, String aboutMe) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = address;
+		this.role = role;
+		this.aboutMe = aboutMe;
+	}
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
 	public int getId() {
 		return id;
 	}
@@ -75,10 +147,10 @@ public class Users {
 		this.email = email;
 	}
 	public String getAddress() {
-		return address;
+		return city;
 	}
 	public void setAddress(String address) {
-		this.address = address;
+		this.city = address;
 	}
 <<<<<<< HEAD
 	public String getaboutMe() {
@@ -113,7 +185,7 @@ public class Users {
 =======
 	@Override
 	public int hashCode() {
-		return Objects.hash(address, email, firstName, id, lastName, password, role, userName);
+		return Objects.hash(aboutMe, city, day, email, firstName, id, lastName, password, role, time, userName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -124,16 +196,21 @@ public class Users {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		return Objects.equals(address, other.address) && Objects.equals(email, other.email)
-				&& Objects.equals(firstName, other.firstName) && id == other.id
+		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(city, other.city) && day == other.day
+				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
-				&& role == other.role && Objects.equals(userName, other.userName);
+				&& role == other.role && time == other.time && Objects.equals(userName, other.userName);
 	}
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+<<<<<<< HEAD
 				+ ", password=" + password + ", email=" + email + ", address=" + address + ", role=" + role + "]";
 >>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+=======
+				+ ", password=" + password + ", email=" + email + ", city=" + city + ", role=" + role + ", aboutMe="
+				+ aboutMe + ", time=" + time + ", day=" + day + "]";
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
 			String address, UserRole role) {
@@ -144,7 +221,7 @@ public class Users {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.address = address;
+		this.city = address;
 		this.role = role;
 	}
 	public Users(String firstName, String lastName, String userName, String password, String email, String address,
@@ -155,9 +232,13 @@ public class Users {
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+<<<<<<< HEAD
 		this.address = address;
 		this.aboutMe = aboutMe;
 		this.role = role;
+=======
+		this.city = address;
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
 			String address, String aboutMe, UserRole role) {
