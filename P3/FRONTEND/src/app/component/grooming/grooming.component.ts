@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { ServicesService } from 'src/app/service/services.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Role, Users } from '../../models/Users';
+=======
+>>>>>>> origin/Aly
 
 @Component({
   selector: 'app-grooming',
@@ -9,6 +12,7 @@ import { Role, Users } from '../../models/Users';
   styleUrls: ['./grooming.component.css']
 })
 export class GroomingComponent implements OnInit {
+<<<<<<< HEAD
   users!: Array<Users>;
   role!: Array<Role>;
   action!: string;
@@ -28,4 +32,12 @@ export class GroomingComponent implements OnInit {
    console.log(this.users);
   }
   
+=======
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+>>>>>>> origin/Aly
 }

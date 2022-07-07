@@ -35,6 +35,7 @@ public class Users {
 <<<<<<< HEAD
 	private String city;
 	private UserRole role;
+<<<<<<< HEAD
 	private String aboutMe;
 	private TimeofDay time;
 	private Days day;
@@ -125,6 +126,12 @@ public class Users {
 		this.role = role;
 >>>>>>> origin/cody
 	}
+=======
+<<<<<<< HEAD
+	
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+>>>>>>> origin/Aly
 	public int getId() {
 		return id;
 	}
@@ -168,20 +175,67 @@ public class Users {
 	public void setAddress(String address) {
 		this.city = address;
 	}
+<<<<<<< HEAD
+	public String getaboutMe() {
+		return aboutMe;
+	}
+	public void setaboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
 	public UserRole getRole() {
 		return role;
 	}
 	public void setRole(UserRole role) {
 		this.role = role;
 	}
+<<<<<<< HEAD
+	
+	
+	public Users() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.address = address;
+=======
 	@Override
 	public int hashCode() {
 		return Objects.hash(aboutMe, city, day, email, firstName, id, lastName, password, role, time, userName);
 =======
 		return address;
 	}
+<<<<<<< HEAD
 	public void setAddress(String address) {
 		this.address = address;
+=======
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Users other = (Users) obj;
+		return Objects.equals(address, other.address) && Objects.equals(email, other.email)
+				&& Objects.equals(firstName, other.firstName) && id == other.id
+				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
+				&& role == other.role && Objects.equals(userName, other.userName);
+	}
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+				+ ", password=" + password + ", email=" + email + ", address=" + address + ", role=" + role + "]";
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+>>>>>>> origin/Aly
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
 			String address) {
@@ -194,7 +248,8 @@ public class Users {
 		this.email = email;
 		this.address = address;
 	}
-	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
+	public Users(String firstName, String lastName, String userName, String password, String email, String address,
+			String aboutMe, UserRole role) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -202,10 +257,21 @@ public class Users {
 		this.password = password;
 		this.email = email;
 		this.address = address;
+		this.aboutMe = aboutMe;
+		this.role = role;
 	}
-	public Users() {
+	public Users(int id, String firstName, String lastName, String userName, String password, String email,
+			String address, String aboutMe, UserRole role) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.address = address;
+		this.aboutMe = aboutMe;
+		this.role = role;
 	}
 	@Override
 	public int hashCode() {
@@ -271,8 +337,6 @@ public class Users {
 				+ ", role=" + role + "]";
 	}
 >>>>>>> origin/cody
-	
-	
 	
 	
 	

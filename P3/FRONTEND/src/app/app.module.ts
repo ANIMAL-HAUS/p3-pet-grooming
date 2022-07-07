@@ -5,15 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ContractorProfileComponent } from './component/contractor-profile/contractor-profile.component';
-import { CustomerProfileComponent } from './component/customer-profile/customer-profile.component';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { HeaderComponent } from './component/header/header.component';
+
+
 import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 <<<<<<< HEAD
 import { RouterModule } from '@angular/router';
 import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
 import { HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import { AllLoginComponent } from './component/all-login/all-login.component';
 =======
 import { Router, RouterModule } from '@angular/router';
@@ -22,15 +22,23 @@ import { RegisterCustomerComponent } from './component/register-customer/registe
 import { HttpClientModule } from '@angular/common/http';
 
 >>>>>>> origin/cody
+=======
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { HeaderComponent } from './component/header/header.component';
+import { GroomingComponent } from './component/grooming/grooming.component';
+import { LoginComponent } from './component/login/login.component';
+>>>>>>> origin/Aly
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    ContractorProfileComponent,
-    CustomerProfileComponent,
+    ContractorProfileComponent, 
+    FooterComponent,
+    RegisterCustomerComponent,
     DashboardComponent,
     HeaderComponent,
+<<<<<<< HEAD
     FooterComponent,
 <<<<<<< HEAD
     RegisterCustomerComponent,
@@ -40,6 +48,10 @@ import { HttpClientModule } from '@angular/common/http';
     GroomingComponent,
     RegisterCustomerComponent
 >>>>>>> origin/cody
+=======
+    GroomingComponent,
+    LoginComponent
+>>>>>>> origin/Aly
   ],
   imports: [
     BrowserModule,
@@ -52,8 +64,13 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'component/register', component:RegisterComponent},
   {path: 'component/register-customer', component:RegisterCustomerComponent},
   {path: 'component/contractor-profile', component: ContractorProfileComponent},
+<<<<<<< HEAD
   {path: 'component/customer-profile', component: CustomerProfileComponent},
   {path: 'dashboard', component: DashboardComponent},
+=======
+  // {path: 'component/customer-profile', component: CustomerProfileComponent},
+
+>>>>>>> origin/Aly
 
     ]),
 ],
