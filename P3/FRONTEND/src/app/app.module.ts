@@ -10,10 +10,18 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { RouterModule } from '@angular/router';
 import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AllLoginComponent } from './component/all-login/all-login.component';
+=======
+import { Router, RouterModule } from '@angular/router';
+import { GroomingComponent } from './component/grooming/grooming.component';
+import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
+import { HttpClientModule } from '@angular/common/http';
+
+>>>>>>> origin/cody
 
 @NgModule({
   declarations: [
@@ -24,13 +32,19 @@ import { AllLoginComponent } from './component/all-login/all-login.component';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
+<<<<<<< HEAD
     RegisterCustomerComponent,
     AllLoginComponent,
 
+=======
+    GroomingComponent,
+    RegisterCustomerComponent
+>>>>>>> origin/cody
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -43,6 +57,13 @@ import { AllLoginComponent } from './component/all-login/all-login.component';
 
     ]),
 ],
+=======
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule,
+  ],
+>>>>>>> origin/cody
   providers: [],
   bootstrap: [AppComponent]
 })

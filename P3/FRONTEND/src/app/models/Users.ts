@@ -12,4 +12,8 @@ export class Users {
 }
 export enum Role {
     Contractor,
+<<<<<<< HEAD
     Customer}
+=======
+    Customer}
+>>>>>>> origin/cody

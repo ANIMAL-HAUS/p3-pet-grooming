@@ -1,6 +1,9 @@
 package com.revature.models;
 
+<<<<<<< HEAD
 import java.util.List;
+=======
+>>>>>>> origin/cody
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -14,7 +17,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
+<<<<<<< HEAD
 @Table(name = "Services")
+=======
+@Table(name = "Product")
+>>>>>>> origin/cody
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +31,7 @@ public class Product {
 	@Column(nullable = false)
 	private Double price;
 	
+<<<<<<< HEAD
 	//private String username;
 //	private List<String> days;
 //	private List<String> hours;
@@ -39,6 +47,10 @@ public class Product {
 //		this.days = days;
 //		this.hours = hours;
 //	}
+=======
+	
+	
+>>>>>>> origin/cody
 	public Product(String description, Double price) {
 		super();
 		Description = description;

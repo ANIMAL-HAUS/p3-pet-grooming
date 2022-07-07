@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
@@ -5,6 +6,11 @@ import {Users } from '../../models/Users';
 import {Role } from '../../models/Users';
 
 import { ServicesService } from 'src/app/service/services.service';
+=======
+import { Component, OnInit } from '@angular/core';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+>>>>>>> origin/cody
 
 @Component({
   selector: 'app-register',
@@ -12,7 +18,10 @@ import { ServicesService } from 'src/app/service/services.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+ 
 
+
+<<<<<<< HEAD
   firstName!: string;
   lastName!: string;
   userName!: string;
@@ -65,4 +74,13 @@ export class RegisterComponent implements OnInit {
     );
   }
  
+=======
+  constructor() { }
+  ngOnInit(): void {
+  
+    
+  }
+>>>>>>> origin/cody
 }
+  
+

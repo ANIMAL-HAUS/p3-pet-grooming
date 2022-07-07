@@ -25,7 +25,11 @@ public class UserServices {
 public static Users getUserById(int id) {
 	return ud.getUsersById(id);	
 }
+<<<<<<< HEAD
 public static List<Users> getAllUsers() {
+=======
+public List<Users> getAllUsers() {
+>>>>>>> origin/cody
 	return UserDAO.getAllUsers();
 }
 public static Users getByUsersName(String userName) {

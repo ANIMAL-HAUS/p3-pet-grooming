@@ -21,7 +21,12 @@ public class CheckoutDAO {
 		double amount = 0;
 		double tax = .08;
 		for (Product pr : product) {
+<<<<<<< HEAD
 			
+=======
+			history.setProductId(pr.getId());
+			history.setUserId(user);
+>>>>>>> origin/cody
 			double temp =  (pr.getPrice() * tax);
 			amount += temp;
 		}

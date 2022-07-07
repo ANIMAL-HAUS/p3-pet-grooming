@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Users, Role } from 'src/app/models/Users';
 import { ServicesService } from 'src/app/service/services.service';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> origin/cody
 
 @Component({
   selector: 'app-register-customer',
@@ -10,6 +14,7 @@ import { ServicesService } from 'src/app/service/services.service';
 })
 export class RegisterCustomerComponent implements OnInit {
 
+<<<<<<< HEAD
   firstName!: string;
   lastName!: string;
   userName!: string;
@@ -56,4 +61,11 @@ export class RegisterCustomerComponent implements OnInit {
       }
     );
   }
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+>>>>>>> origin/cody
 }
