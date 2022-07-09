@@ -34,6 +34,12 @@ public class Users {
 	private String email;
 	private String city;
 	private UserRole role;
+<<<<<<< HEAD
+<<<<<<< HEAD
+	
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+=======
 	private String aboutMe;
 	private TimeofDay time;
 	private Days day;
@@ -103,6 +109,7 @@ public class Users {
 		this.role = role;
 		this.aboutMe = aboutMe;
 	}
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
 	public int getId() {
 		return id;
 	}
@@ -145,12 +152,37 @@ public class Users {
 	public void setAddress(String address) {
 		this.city = address;
 	}
+<<<<<<< HEAD
+	public String getaboutMe() {
+		return aboutMe;
+	}
+	public void setaboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+=======
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
 	public UserRole getRole() {
 		return role;
 	}
 	public void setRole(UserRole role) {
 		this.role = role;
 	}
+<<<<<<< HEAD
+	
+	
+	public Users() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.address = address;
+=======
 	@Override
 	public int hashCode() {
 		return Objects.hash(aboutMe, city, day, email, firstName, id, lastName, password, role, time, userName);
@@ -172,8 +204,13 @@ public class Users {
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+<<<<<<< HEAD
+				+ ", password=" + password + ", email=" + email + ", address=" + address + ", role=" + role + "]";
+>>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+=======
 				+ ", password=" + password + ", email=" + email + ", city=" + city + ", role=" + role + ", aboutMe="
 				+ aboutMe + ", time=" + time + ", day=" + day + "]";
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
 	}
 	public Users(int id, String firstName, String lastName, String userName, String password, String email,
 			String address, UserRole role) {
@@ -187,21 +224,35 @@ public class Users {
 		this.city = address;
 		this.role = role;
 	}
-	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
+	public Users(String firstName, String lastName, String userName, String password, String email, String address,
+			String aboutMe, UserRole role) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+<<<<<<< HEAD
+		this.address = address;
+		this.aboutMe = aboutMe;
+		this.role = role;
+=======
 		this.city = address;
+>>>>>>> 86a70d04d3f258dc0f797b1075452118d418c6c6
 	}
-	public Users() {
+	public Users(int id, String firstName, String lastName, String userName, String password, String email,
+			String address, String aboutMe, UserRole role) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.address = address;
+		this.aboutMe = aboutMe;
+		this.role = role;
 	}
-	
-	
 	
 	
 	
