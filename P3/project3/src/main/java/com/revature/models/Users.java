@@ -32,20 +32,171 @@ public class Users {
 	@Column(nullable = false)
 	private String password;
 	private String email;
-	private String address;
-	private String aboutMe;
+	private String city;
 	private UserRole role;
-	public Users(String firstName, String lastName, String userName, String password, String email, String address,
-			String aboutMe, UserRole role) {
+	private String aboutMe;
+	private TimeofDay time;
+	private Days day;
+	private ServiceOffered service;
+	private double price;
+	private String description;
+	
+	public Users(String firstName, String lastName, String userName, String password, String email, String city,
+			String aboutMe, TimeofDay time, Days day, ServiceOffered service, double price, String description) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
-		this.address = address;
+		this.city = city;
 		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+		this.service = service;
+		this.price = price;
+		this.description = description;
+	}
+	public Users(int id, String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day, ServiceOffered service, double price,
+			String description) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
 		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+		this.service = service;
+		this.price = price;
+		this.description = description;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String city,
+			String aboutMe, TimeofDay time, Days day, ServiceOffered service) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+		this.service = service;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day, ServiceOffered service) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+		this.service = service;
+	}
+	public Users(int id, String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day, ServiceOffered service) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+		this.service = service;
+	}
+	public ServiceOffered getService() {
+		return service;
+	}
+	public void setService(ServiceOffered service) {
+		this.service = service;
+	}
+	public Users(int id, String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public TimeofDay getTime() {
+		return time;
+	}
+	public void setTime(TimeofDay time) {
+		this.time = time;
+	}
+	public Days getDay() {
+		return day;
+	}
+	public void setDay(Days day) {
+		this.day = day;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String city,
+			UserRole role, String aboutMe, TimeofDay time, Days day) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = city;
+		this.role = role;
+		this.aboutMe = aboutMe;
+		this.time = time;
+		this.day = day;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String address,
+			UserRole role, String aboutMe) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = address;
+		this.role = role;
+		this.aboutMe = aboutMe;
 	}
 	public String getAboutMe() {
 		return aboutMe;
@@ -53,11 +204,18 @@ public class Users {
 	public void setAboutMe(String aboutMe) {
 		this.aboutMe = aboutMe;
 	}
-	public UserRole getRole() {
-		return role;
-	}
-	public void setRole(UserRole role) {
+	public Users(int id, String firstName, String lastName, String userName, String password, String email,
+			String address, UserRole role, String aboutMe) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = address;
 		this.role = role;
+		this.aboutMe = aboutMe;
 	}
 	public int getId() {
 		return id;
@@ -96,38 +254,21 @@ public class Users {
 		this.email = email;
 	}
 	public String getAddress() {
-		return address;
+		return city;
 	}
 	public void setAddress(String address) {
-		this.address = address;
+		this.city = address;
 	}
-	public Users(int id, String firstName, String lastName, String userName, String password, String email,
-			String address) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.email = email;
-		this.address = address;
+	public UserRole getRole() {
+		return role;
 	}
-	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.userName = userName;
-		this.password = password;
-		this.email = email;
-		this.address = address;
-	}
-	public Users() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setRole(UserRole role) {
+		this.role = role;
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(aboutMe, address, email, firstName, id, lastName, password, role, userName);
+		return Objects.hash(aboutMe, city, day, description, email, firstName, id, lastName, password, price, role,
+				service, time, userName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -138,17 +279,46 @@ public class Users {
 		if (getClass() != obj.getClass())
 			return false;
 		Users other = (Users) obj;
-		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(address, other.address)
-				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName) && id == other.id
+		return Objects.equals(aboutMe, other.aboutMe) && Objects.equals(city, other.city) && day == other.day
+				&& Objects.equals(description, other.description) && Objects.equals(email, other.email)
+				&& Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName) && Objects.equals(password, other.password)
-				&& role == other.role && Objects.equals(userName, other.userName);
+				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price) && role == other.role
+				&& service == other.service && time == other.time && Objects.equals(userName, other.userName);
 	}
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
-				+ ", password=" + password + ", email=" + email + ", address=" + address + ", aboutMe=" + aboutMe
-				+ ", role=" + role + "]";
+				+ ", password=" + password + ", email=" + email + ", city=" + city + ", role=" + role + ", aboutMe="
+				+ aboutMe + ", time=" + time + ", day=" + day + ", service=" + service + ", price=" + price
+				+ ", description=" + description + "]";
 	}
+	public Users(int id, String firstName, String lastName, String userName, String password, String email,
+			String address, UserRole role) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = address;
+		this.role = role;
+	}
+	public Users(String firstName, String lastName, String userName, String password, String email, String address) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.city = address;
+	}
+	public Users() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 	
 	

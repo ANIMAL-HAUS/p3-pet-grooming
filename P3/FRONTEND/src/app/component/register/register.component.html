@@ -1,5 +1,3 @@
-<h1>Register Contractor</h1>
-
 <div class="container">
   <h1 style="text-align: center;">Create Contractor Account</h1>
   <form #recievedUser="ngForm">
@@ -44,7 +42,7 @@
   <div class="row  justify-content-center">
     <div class="col-6">
   <label for="role">Role</label>
-  <input type="text" class="form-control" id="role" placeholder="Role" [(ngModel)]="user.userRole" name="lname">
+  <input type="text" class="form-control" id="role" placeholder="Role" [(ngModel)]="user.role" name="lname">
 </div>
 </div>
   <div class="row  justify-content-center">
@@ -69,34 +67,23 @@
     <div class="p-2"> 
       <h3>Availability</h3>
         <select name="timeofweek">
-          <option value="selectweek">Select Time of Week</option>
-          <option value="weekday">Monday-Friday</option><br>
-          <option value="weekends">Weekends</option><br>
-          <option value="anytime">Anytime</option><br>
+          <option value="selectweek" [(ngModel)]="user.day">Select Time of Week</option>
+          <option *ngFor="let day of days">{{day}}</option><br>
         </select>
       </div>
       <div class="p-2">
-        <select name="timeofday">
+        <select name="timeofday" [(ngModel)]="user.time">
         <option value="selectday">Select Time of Day</option>
-        <option value="morning">Morning</option><br>
-        <option value="afternoon">Afternoon</option><br>
-        <option value="night">Night</option><br>
-        <option value="anytime">Anytime</option><br>
+        <option *ngFor="let time of times">{{time}}</option><br>
       </select>
       </div>
    
         <div class="p-2">
           <h3>What services do you offer?</h3>
-          <div class="col-8">
-            <label for="aboutme">About Me</label>
-              <textarea class="form-control" rows="5" cols="80" id="aboutme"></textarea>
-            </div>
         </div>
         <select name="Pet Services">
-          <option value="select">Select Service</option>
-          <option value="grooming">Pet Grooming</option>
-          <option value="walking">Dog Walking</option>
-          <option value="sit">Pet Sitting</option>
+          <option value="select" [(ngModel)]="user.service">Select Service</option>
+          <option *ngFor="let service of services">{{service}}</option>
         </select>
         <!-- <label for="text">Service Description</label> -->
         <!-- <input type="checkbox" id="groom" name="groom" value="groom">
@@ -119,8 +106,8 @@
    <br>
    <div class="row">
      <input type="checkbox" id="terms" name="terms" value="terms">
-     <label for="terms">By creating this account, I acknowledge that I have read and agree to the Animal Haus Terms and Conditions.</label>
-   </div>
+     <label for="terms">By creating this account, I acknowledge that I have read and agree to the Animal Haus <a href="/assets/files/Customer_Terms-and-Conditions.docx">Terms and Conditions.</a></label>
+    </div>
    <div class="row justify-content-center">
        <div class="col-6">
   <button type="button" class="btn btn-success">Create Account</button>

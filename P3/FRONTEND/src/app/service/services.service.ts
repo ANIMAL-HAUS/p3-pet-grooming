@@ -21,6 +21,13 @@ export class ServicesService {
     }))
   }
 
+  getServices(){
+    return this.httpClient.get<any>('http://localhost:7200/petgrooming/productController')
+    .pipe(map((res:any)=>{
+      return res;
+    }))
+  }
+
   addContractor(newUser: Users) {
     return this.httpClient.post<Users>('http://localhost:7200/petgrooming/authcontroller/contractor', newUser);   
   }

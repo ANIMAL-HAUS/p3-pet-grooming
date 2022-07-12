@@ -56,7 +56,7 @@ public class AuthController {
 		
 	}
 	
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public ResponseEntity<Users> login(@RequestBody Users user){
 		if (user.getUserName() == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(user);

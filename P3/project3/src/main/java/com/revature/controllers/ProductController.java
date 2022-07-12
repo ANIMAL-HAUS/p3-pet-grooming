@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +34,7 @@ public class ProductController {
 	
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public List<Product> getAllHouses(){
+	public List<Product> getAllProducts(){
 		return ProductServices.getAllProducts();
 	}
 	
@@ -72,13 +73,6 @@ public class ProductController {
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).body(product);
 			
 	}
-//	@PostMapping("/getProductByID")
-//	public static ResponseEntity<Product> getProductByID(@RequestBody int id){
-//		Product p = new Product();
-//		p = ProductServices.getProductById(id);
-//		 ResponseEntity.status(HttpStatus.CREATED).body(p);
-//		 return ResponseEntity.status(200).body(p);
-//	}
-//	
+	
 
 }

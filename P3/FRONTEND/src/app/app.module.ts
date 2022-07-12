@@ -14,6 +14,8 @@ import { Router, RouterModule } from '@angular/router';
 import { GroomingComponent } from './component/grooming/grooming.component';
 import { RegisterCustomerComponent } from './component/register-customer/register-customer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AllLoginComponent } from './component/all-login/all-login.component';
+import { CartComponent } from './component/cart/cart.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     GroomingComponent,
-    RegisterCustomerComponent
+    RegisterCustomerComponent,
+    AllLoginComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

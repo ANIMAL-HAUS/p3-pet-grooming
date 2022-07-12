@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import {Users } from '../../models/Users';
-import {Role } from '../../models/Users';
+import {Days, Users } from '../../models/Users';
+// import {eole } from '../../models/Users';
 
 import { ServicesService } from 'src/app/service/services.service';
 
@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   lastName!: string;
   userName!: string;
   password!:string;
-  userRole!: Role;
+  // userRole!: Role;
   email!: string;
   address!: string;
   aboutme!: string;
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   lastName: String,
   userName: String,
   password:String,
-  userRole: Role,
+  
   email: String,
   address: String,
   aboutme: String,
@@ -34,27 +34,30 @@ export class RegisterComponent implements OnInit {
 
   @Input()
   user!: Users;
-  role!: Role;
+  
   
 
   @Output()
   userAddedEvent = new EventEmitter();
 
-  // message!: string;
-  // password!: string;
+  days = ['Weekdays', 'Weekends', 'Anyday']
+  times = ['Morning', 'Afternoon', 'Night', 'Anytime']
+  services = ['Walking', 'Grooming', 'Daycare']
 
   constructor(private ServicesService: ServicesService,
     private router: Router) { }
 
   ngOnInit(): void {
-    
+    this.ServicesService.getContractors()
+    .subscribe(res=>{
+      this.users = res;
+     })
     this.user = new Users();
     console.log('user:', this.user);
 
     
-    
 
-    console.log('role:', Role);
+   
   }
 
   addContractor() {
@@ -66,5 +69,10 @@ export class RegisterComponent implements OnInit {
     );
   }
  
+  // click() {
+  //   if(this.isChecked = true){
+  //   this.router.navigateByUrl('/contractor-profile')
+  //   }
+  // }
 }
 

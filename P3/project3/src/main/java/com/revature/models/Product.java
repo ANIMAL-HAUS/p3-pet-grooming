@@ -1,19 +1,25 @@
 package com.revature.models;
 
+import com.revature.models.Users;
+import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name = "Product")
+@Table(name = "Services")
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,35 +28,7 @@ public class Product {
 	private String Description;
 	@Column(nullable = false)
 	private Double price;
-	
-	
-	
-	public Product(String description, Double price) {
-		super();
-		Description = description;
-		this.price = price;
-	}
-	public Product() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Product(int id, Categories product, String description, Double price) {
-		super();
-		this.id = id;
-		this.product = product;
-		
-		Description = description;
-		this.price = price;
-		
-	}
-	public Product(Categories product, String description, Double price) {
-		super();
-		this.product = product;
-		
-		Description = description;
-		this.price = price;
-	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -63,7 +41,6 @@ public class Product {
 	public void setProduct(Categories product) {
 		this.product = product;
 	}
-	
 	public String getDescription() {
 		return Description;
 	}
@@ -76,9 +53,6 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
-	
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(Description, id, price, product);
@@ -99,7 +73,20 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", product=" + product + ", Description=" + Description + ", price=" + price + "]";
 	}
+	public Product(int id, Categories product, String description, Double price) {
+		super();
+		this.id = id;
+		this.product = product;
+		Description = description;
+		this.price = price;
+	}
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	
-
 }
-
+	
