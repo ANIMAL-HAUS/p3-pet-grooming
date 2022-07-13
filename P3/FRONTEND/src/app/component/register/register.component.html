@@ -66,13 +66,13 @@
 <div class="d-flex flex-column justify-content-center">
     <div class="p-2"> 
       <h3>Availability</h3>
-        <select name="timeofweek">
-          <option value="selectweek" [(ngModel)]="user.day">Select Time of Week</option>
+        <select [(ngModel)]="user.day">
+          <option value="selectweek">Select Time of Week</option>
           <option *ngFor="let day of days">{{day}}</option><br>
         </select>
       </div>
       <div class="p-2">
-        <select name="timeofday" [(ngModel)]="user.time">
+        <select [(ngModel)]="user.time">
         <option value="selectday">Select Time of Day</option>
         <option *ngFor="let time of times">{{time}}</option><br>
       </select>
@@ -81,8 +81,8 @@
         <div class="p-2">
           <h3>What services do you offer?</h3>
         </div>
-        <select name="Pet Services">
-          <option value="select" [(ngModel)]="user.service">Select Service</option>
+        <select [(ngModel)]="user.service">
+          <option value="select">Select Service</option>
           <option *ngFor="let service of services">{{service}}</option>
         </select>
         <!-- <label for="text">Service Description</label> -->
