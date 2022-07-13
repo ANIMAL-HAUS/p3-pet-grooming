@@ -1,6 +1,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
+import { Users } from 'src/app/models/Users';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   // public totalItem : number = 0;
-
+user: Users;
+id: 0;
   constructor() { }
 
   ngOnInit(): void {

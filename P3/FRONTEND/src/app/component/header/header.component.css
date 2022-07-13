@@ -51,12 +51,17 @@
     text-decoration: none;
     color: black;
   }
-  
-  
+
+
   img {
-    height: 120px;
-    width: 120px;
+    height: 8em;
+    width: 8em;
     clip-path: circle();
+    opacity: 1;
+  }
+
+  a:hover {
+    opacity: .7;
   }
   
   .groom, .groom a {
