@@ -53,7 +53,7 @@ export class AllLoginComponent implements OnInit {
 
     let response = this._http.post<any>("http://localhost:5000/petgrooming/authcontroller/login",user,httpOptions).subscribe(
       {
-        next : (v) =>  this.router.navigate([/**'/products??'*/]),
+        next : (v) =>  this.router.navigate(['component', 'customer-profile']),
         error : (e) => this.msgError = "Invalid Credentials, Please Enter a valid user name or password",
         complete: () =>  window.localStorage.setItem("username",(this.username))
       }

@@ -1,16 +1,12 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
-  
 </head>
 <body>
-
-
 <h1>Users Admin</h1>
 <a class="btn btn-primary mb-3" (click)="addContractor()">View Contractors</a>
 <div class="container row">
@@ -46,12 +42,13 @@
         </tr>
       </tbody>
     </table>
-  </div>
-  <div class="col-md-6">
-    <app-register *ngIf="action === 'add'" [user]="selectedUser" (userAddedEvent)="refreshData()"></app-register>
-    <!--<app-contractor-profile *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-contractor-profile>-->
-  <!--</div>
+    </div>
 </div>
-
 </body>
-</html> -->
+</html>
+  <!-- <div class="col-md-6">
+    <app-register *ngIf="action === 'add'" [user]="selectedUser" (userAddedEvent)="refreshData()"></app-register>
+    <app-contractor-profile *ngIf="action === 'view'" [user]="selectedUser" (userDeletedEvent)="refreshData()"></app-contractor-profile>
+  </div>
+</div> -->
+

@@ -4,11 +4,11 @@ import { Users } from 'src/app/models/Users';
 import { ServicesService } from 'src/app/service/services.service';
 
 @Component({
-  selector: 'app-contractor-profile',
+  selector: 'app-customer-profile',
   templateUrl: './customer-profile.component.html',
   styleUrls: ['./customer-profile.component.css']
 })
-export class ContractorProfileComponent implements OnInit {
+export class CustomerProfileComponent implements OnInit {
   
   users!: Array<Users>;
   action!: string;
