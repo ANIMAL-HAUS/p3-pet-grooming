@@ -8,7 +8,7 @@ import { ServicesService } from 'src/app/service/services.service';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html',
+  templateUrl:'./register.component.html' ,
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {

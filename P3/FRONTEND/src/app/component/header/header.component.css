@@ -39,9 +39,7 @@
 
   .navbar {
     margin: 0;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
   }
 
   a {
@@ -99,9 +97,9 @@
     border-color: blue;
     border-style: solid;
   }
-=======
->>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
-  }
+
+
+  
   
   .logo {
     float: left;
@@ -159,7 +157,4 @@
   .container {
     display: inline-block;
   }
-<<<<<<< HEAD
-=======
->>>>>>> fc60529e1c620b65d31d67469654dd05ae128858
->>>>>>> dce3253d2578a517811f43e980c9748a8263b5ec
+
